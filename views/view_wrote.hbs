@@ -1,0 +1,256 @@
+<div id="new-post">
+    <h1>New Post</h1>
+
+    <!-------------FORM: HEADER------------------->
+    <form id="form-header" action="/new_post" method="post">
+
+        <div class="form-group" id="select-post-type-div">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Type</div>
+                </div>
+                <label class="control-label" for="select-post-dropdown"></label>
+                <div class="dropdown form-control dark" id="select-post-dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="heard-dropdown-btn" data-toggle="dropdown">
+                        Select
+                    </button>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item opt" role="menuitem" id='leanred' name="Today I Learned " href="#">Today I Learned</a>
+                        <a class="dropdown-item opt" role="menuitem" id='thought' name="Today I Thought " href="#">Today I Thought</a>
+                        <a class="dropdown-item opt" role="menuitem" id='heard'   name="Today I Heard "   href="#">Today I Heard</a>
+                        <a class="dropdown-item opt" role="menuitem" id='watched' name="Today I Watched " href="#">Today I Watched</a>
+                    </div>
+                    <form id="dropdown-selection" name="selection">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" id="post-title-div">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Title</div>
+                </div>
+                <label class="control-label" for="post-title"></label>
+                <input type="text" name="title" class="form-control dark" id="post-title">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="post-body"></label>
+            <textarea class="form-control dark" name="body" id="post-body" rows="12"></textarea>
+        </div>
+
+
+        <!-------------END FORM: HEADER--------------->
+
+
+        <!-------------FORM: HEARD-------------------->
+        <div id="form-type-heard" class="form-var">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group heard-form">
+                        <label class="control-label" for="artist-name"></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Artist</div>
+                            </div>
+                            <input type="text" name="artist" class="form-control dark" id="artist-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group heard-form">
+                        <label class="control-label" for="album-title"></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Album</div>
+                            </div>
+                            <input type="text" name="album" class="form-control dark" id="album-title">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group heard-form">
+                        <label class="control-label" for="track-title"></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Track</div>
+                            </div>
+                            <input type="text" name="track" class="form-control dark" id="track-title">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group heard-form">
+                        <label class="control-label" for="heard-url"></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">URL</div>
+                            </div>
+                            <input type="url" name="heardUrl" class="form-control dark" id="heard-url">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group heard-form">
+                        <label for="rating" class="control-label"></label>
+                        <div class="input-group" id="rating-div">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="rating-text-div">Select Rating 0-10</div>
+                            </div>
+                            <input id="rating" name="rating" class="form-control dark" type="range" min="0" max="10" value="5" step="1" list="rating-list">
+                            <datalist id="rating-list">
+                                <option value="0">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                <option value="5">
+                                <option value="6">
+                                <option value="7">
+                                <option value="8">
+                                <option value="9">
+                                <option value="10">
+                            </datalist> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="col-12">-->
+                    <!--<div class="form-group heard-form">-->
+                        <!--<label for="heard-form-button"></label>-->
+                        <!--<div class="input-group">-->
+                            <!--<button type="submit" class="btn post-btn" id="heard-form-button">Post</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <!------------ END FORM: HEARD --------------->
+
+
+        <!------------ FORM: WATCHED------------------>
+        <div id="form-type-watched" class="form-var">
+
+            <!-- ROW: URL CHECK & INPUT -->
+            <div class="row">
+                <div class="col-4 watched-col">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label class="form-check-label" for="watched-check-url">
+                                <input type="checkbox" class="form-check-input" id="watched-check-url">Add Link
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 watched-col" id="watched-url-input-div">
+                    <div class="form-group">
+                        <div class="input-group" id="watched-url-inner-div">
+                            <div class="input-group-prepend" id="url-prepend">
+                                <div class="input-group-text">LINK</div>
+                            </div>
+                            <label class="control-label" for="watched-url-input"></label>
+                            <input type="url" name="watchedUrl" class="form-control dark" id="watched-url-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END ROW: URL CHECK & INPUT -->
+
+            <!-- ROW: FILE CHECK & INPUT -->
+            <div class="row">
+                <div class="col-4 watched-col">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label class="form-check-label" for="watched-check-file">
+                                <input type="checkbox" class="form-check-input" id="watched-check-file">Add File
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 watched-col" id="watched-file-input-outer-div">
+                    <div class="form-group">
+                        <div class="input-group" id="watched-file-input-inner-div">
+                            <div class="input-group-prepend" id="file-prepend">
+                                <div class="input-group-text" id="file-prepend-text">FILE</div>
+                            </div>
+                            <label class="control-label custom-file-upload" for="watched-file-input" id="file-input-label">
+                                <input type="file" name="file" class="custom-file-upload form-control dark" id="watched-file-input" title="">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END ROW: FILE CHECK & INPUT -->
+
+
+            <!--&lt;!&ndash; ROW: WATCHED SUBMIT BUTTON &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-12" id="watched-submit-btn-div">-->
+                    <!--<div class="form-group">-->
+                        <!--<div class="input-group">-->
+                            <!--<label for="watched-form-button"></label>-->
+                            <!--<button type="submit" class="btn post-btn" id="watched-form-button">Post</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; END ROW: WATCHED SUBMIT BUTTON &ndash;&gt;-->
+
+
+        </div>
+        <!------------ END FORM WATCHED -------------->
+
+
+
+        <!--&lt;!&ndash; THOUGHT SUBMIT BUTTON &ndash;&gt;-->
+        <!--<div id="form-type-thought" class="row form-var">-->
+            <!--<div class="col-12" id="thought-submit-btn-div">-->
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
+                        <!--<label for="thought-form-button"></label>-->
+                        <!--<button type="submit" class="btn post-btn" id="thought-form-button">Post</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; END THOUGHT SUBMIT BUTTON &ndash;&gt;-->
+
+
+        <!-- LEARNED SUBMIT BUTTON -->
+        <!--<div id="form-type-learned" class="row form-var">-->
+            <!--<div class="col-12" id="learned-submit-btn-div">-->
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
+                        <!--<label for="learned-form-button"></label>-->
+                        <!--<button type="submit" class="btn post-btn" id="learned-form-button">Post</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; END LEARNED SUBMIT BUTTON &ndash;&gt;-->
+
+        <div id="submit-btn-div" class="row">
+            <div class="col-12 form-group input-group">
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
+                        <label for="submit-btn"></label>
+                        <button type="submit" class="btn post-btn" id="new-post-form-btn">Post</button>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+
+    </form>
+
+
+
+</div><!-- END NEW POST WRAPPER DIV -->

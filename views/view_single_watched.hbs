@@ -1,0 +1,13 @@
+
+
+<div id="solo-watched-post">
+    {{#if post}}
+        <h2>{{post.post_title}}</h2>
+        <h6>Posted {{post.date_created}} by {{post.post_author}}</h6>
+        <br>
+        <p class="post-body">{{post.post_body}}</p>
+        <br>
+    {{else}}
+        <p>No Post found for ID</p>
+    {{/if}}
+</div>

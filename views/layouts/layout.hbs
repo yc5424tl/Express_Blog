@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+  <!--<head>-->
+    <!--<title>{-{title}-}</title>-->
+    <!--<link rel='stylesheet' href='/stylesheets/style.css' />-->
+  <!--</head>-->
+  <!--<body>-->
+    <!--{-{-{body}-}-}-->
+  <!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kater Bater's Blog {{title}}</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <link href="/stylesheets/style.css"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|La+Belle+Aurore|Reem+Kufi"
+          rel="stylesheet">
+</head>
+
+{{!< LAYOUT}}
+
+<body>
+<!----------------------------------NAVBAR---------------------------->
+<nav class="navbar navbar-dark" role="navigation">
+    <div class="container-fluid">
+
+        <button id='sidebar-toggle-button' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarToggle">
+            <span class="navbar-toggler-icon pull-right"></span>
+        </button>
+
+        <form class="form-inline navbar-form" id="nav-login-form">
+
+            <div id='user_login' class="form-group nav navbar-nav float-lg-right">
+
+                <label class="control-label" for="username-field">
+                    <input id="username-field" class="form-control login" type="text" placeholder="User"></label>
+
+                <label class="control-label" for="password-field">
+                    <input id="password-field" class="form-control login" type="password" placeholder="Password"></label>
+
+                <label class="control-label" for="submit-btn">
+                    <button id="submit-btn" class="btn form-control login" type="submit">Login</button></label>
+
+                <label class="control-label" for="login-btn">
+                    <button id="login-btn" class=" btn form-control login" type="button" >Login</button></label>
+
+            </div>
+        </form>
+    </div>
+</nav>
+<!----------------------------------END NAVBAR------------------------>
+
+<div id="body">
+    <div class="row">
+
+        <!------------------------- SIDEBAR -------------------------->
+        <div id="sidebar-div" class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+            <ul class="nav list-group" role="directory" id="nav-list">
+                <li class="nav-item list-group-item" value="home">   <a class="nav-link" href="/"       >...Went Home</a></li>
+                <li class="nav-item list-group-item" value="learned"><a class="nav-link" href="/learned">...Learned</a></li>
+                <li class="nav-item list-group-item" value="thought"><a class="nav-link" href="/thought">...Thought</a></li>
+                <li class="nav-item list-group-item" value="heard">  <a class="nav-link" href="/heard"  >...Heard</a></li>
+                <li class="nav-item list-group-item" value="watched"><a class="nav-link" href="/watched">...Watched</a></li>
+                <li class="nav-item list-group-item" value="post">   <a class="nav-link" href="/wrote"  >...Wrote</a></li>
+            </ul>
+        </div>
+        <!--------------------------END SIDEBAR----------------------->
+
+
+        <!------------------------- CONTENT--------------------------->
+        <div class="flash-messages">
+            {{#if messages}}
+                <p class="error-message">{{messages.error}}</p>
+                <p class="info-message">{{messages.info}}</p>
+            {{/if}}
+        </div>
+
+        <div class="col">
+            <div id="content" class="container-fluid">
+                <div id="content-left" class="col-lg-5 col-md-10 col-sm-12 flex-item equal-width">
+                    {{{body}}}
+                    <footer class="footer">
+                        <div id="footer-div">
+                            <p class="footer-block">
+                                <span id="date-time-span"></span> Jacob Boline 2018
+                                <a href="https://github.com/yc5424tl/kater_bater_blog">this.github</a>
+                            </p>
+                        </div>
+                    </footer>
+                </div> <!--END CONTENT-LEFT--->
+                <div id="content-right" class="col-lg-5 col-md-10 col-sm-12 flex-item equal-width">
+                    <img id="content-right-img" class="img-responsive" src="/images/background-3203817.jpg">
+                </div><!--END CONTENT-RIGHT-->
+            </div><!-- END CONTAINER-FLUID -->
+        </div> <!-- END COL -->
+        <!------------------------- END CONTENT ---------------------->
+
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script src="/javascripts/index_style.js"></script>
+
+</body>
+</html>

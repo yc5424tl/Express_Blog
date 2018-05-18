@@ -1,0 +1,21 @@
+
+<div id="heard-post-list">
+    {{#if posts}}
+        <ul>
+            {{#each posts}}
+                <li class="heard-post-li">
+                    <div class="heard-post-div">
+                        <a href="heardPost/{{this._id}}">{{this.post_title}}</a>
+                        <p class="author-time">
+                            Posted by {{this.post_author}} @ {{this.date_created}}</p>
+                        {{#if date_last_edit}}Edited: {{this.date_last_edit}}{{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No 'Today I Heard' Posts</p>
+    {{/if}}
+</div>
+
+

@@ -1,0 +1,20 @@
+
+<div id="watched-post-list">
+    {{#if posts}}
+        <ul>
+            {{#each posts}}
+                <li class="watched-post-li">
+                    <div class="watched-post-div">
+                        <a href="watched/{{this._id}}">{{this.post_title}}</a>
+                        <p class="author-time">
+                            Posted by {{this.post_authot}} @ {{this.date_created}}</p>
+                        {{#if date_last_edit}}Edited: {{this.date_last_edit}}{{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No 'Today I Watched' Posts</p>
+    {{/if}}
+</div>
+

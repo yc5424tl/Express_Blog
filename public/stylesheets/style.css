@@ -1,0 +1,426 @@
+
+html {
+    width: 100%;
+}
+body {
+    font-family:      'Reem Kufi', sans-serif;
+    font-size:        large;
+    width:            100%;
+    height:           100%;
+    margin:           0;
+    background-color: black;
+    color:            white;
+}
+#body {
+    margin:           0 auto;
+    background-color: black;
+    height:           100%;
+}
+* {
+    padding:    0;
+    margin:     0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family:   "La Belle Aurore", cursive;
+    color:         #F2010C;
+    margin-bottom: 1em;
+}
+.equal-width {
+    flex: 1;
+}
+.col {
+    margin:  0;
+    padding: 0;
+}
+div {
+    padding: 0;
+    margin:  0;
+}
+.row {
+    width:   inherit;
+    margin:  0;
+    padding: 0;
+}
+
+
+
+/*******************  NAV  **************************/
+.nav > .nav-item.list-group-item {
+    color:            red;
+    font-weight:      900;
+    font-size:        20pt;
+    font-family:      "La Belle Aurore", cursive;
+    background-color: transparent;
+    border:           none;
+    align-content:    center;
+    align-self:       center;
+    align-items:      center;
+}
+/* Navigation List Items */
+.nav-item.list-group-item > a {
+    color:               #F2010C;
+    transition-duration: 0.4s;
+    border-radius:       12px;
+    align-content:       center;
+    align-items:         center;
+    margin:              0;
+    padding:             0;
+}                    /* Navigation List Links */
+.nav-item.list-group-item > a:hover,
+.nav-item.list-group-item > a:focus {
+    background-color: white;
+    color:            black;
+    padding:          10px 21px 5px 10px;
+}              /* Navigation List Links Hover/Focus */
+.navbar.navbar-dark {
+    background: transparent;
+    display:    inline;
+    margin-top: 1em;
+}                              /* Navbar */
+@media all and (max-width: 567px) {
+    #nav-login-form {
+        display: none;
+    }
+}
+#username-field, #password-field, #submit-btn {
+    display: none;
+    margin:  0 0 0 5px;
+}
+.form-group.nav.navbar-nav.float-lg-right {
+    align-content: space-between;
+}
+.navbar-toggler-icon {
+    color: #5FBFF9;
+}
+/******************  END NAV  ************************/
+
+
+
+/******************  SIDEBAR  ************************/
+#sidebar-toggle-button {
+    padding:   .2em 1em;
+    font-size: 1em;
+    border:    none;
+}
+#sidebar-toggle-button:focus {
+    outline: none;
+}
+#sidebar-toggle-button:hover {
+    border-left: 1px solid #437C90;
+    border-top:  1pt solid #437C90;
+}
+#sidebar-div {
+    color:            #F2010C;
+    background-color: black;
+    display:          none;
+    margin-top:       15px;
+    align-content:    center;
+    height:           100%;
+    border-right:     1pt solid white;
+    max-width:        435px;
+}
+#sidebar-div p {
+    margin:    15px;
+    font-size: 0.917em;
+}
+#sidebar-div > ul {
+    list-style: none;
+}
+/*@media all and (min-width:1276px) {*/
+/*#sidebar-div {*/
+/*col-xl: 3;*/
+/*}*/
+/*}*/
+/*@media all and (min-width:639px){*/
+/*#sidebar-div > .col-sm{*/
+/*column-count: 4;*/
+/*}*/
+/*}*/
+/****************** END SIDEBAR **********************/
+
+
+
+/*****************  CONTENT  *************************/
+#content {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+#content-left {
+    bottom:        0;
+    font-size:     large;
+    padding-top:   2em;
+    margin-left:   1em;
+    padding-right: 2em;
+    width:         auto;
+}
+#content-right {
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+
+}
+#content-right-img {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    margin: 0 auto;
+    object-fit: scale-down;
+}
+footer {
+    bottom:     0;
+    margin-top: auto;
+}
+/*****************  END CONTENT  *********************/
+
+
+
+/***************  MEDIA BREAKPOINTS  *****************/
+@media all and (max-width: 991px) {
+    #content {
+        flex-flow: column-reverse nowrap;
+    }
+}                        /* 1 content */
+@media all and (max-width: 991px) {
+    #content-right, #content-left {
+        display:       block;
+        max-width:     100%;
+        width:         100%;
+        margin-bottom: 2em;
+    }
+}                        /* 8 content-right, content-left */
+@media all and (max-width: 991px) {
+    .equal-width {
+        flex: 0 auto;
+    }
+}                        /* 9 equal-width */
+@media all and (min-width: 992px) {
+    #content-left {
+        margin-left: 4em;
+        width:       40%;
+        max-width:   40%;
+    }
+    #content-right {
+        max-width: 60%;
+        width:     60%;
+    }
+}                       /* 2 content-left, content-right */
+@media all and (min-width:768px) and (max-width:991px) {
+    #content-left {
+        padding-top: 0;
+    }
+}   /* 5 content-left */
+@media all and (max-width:991px) {
+    #content-right-img {
+        width:      100%;
+        align-self: flex-end;
+        margin:     auto;
+        overflow:   hidden;
+        position:   relative;
+        display:    block;
+    }
+    #content-right {
+        padding: 0;
+    }
+}                         /* 7 content-right-img, content-right */
+@media all and (min-width: 992px)  {
+    #content-right-img {
+        width:      80%;
+        object-fit: cover;
+    }
+}                       /* 4 content-right-img */
+@media all and (min-width:540px) and (max-width: 1199px) {
+    #content-right {
+        height: 225px;
+    }
+    #content-right-img {
+        object-fit: cover;
+    }
+} /* 6 content-right, content-right-image */
+/****************** END BREAKPOINTS  *****************/
+
+
+
+/********************  FOOTER  ***********************/
+.footer-block {
+    padding:10px;
+}
+#footer-div {
+    height:     100%;
+    bottom:     0;
+    min-height: 30px;
+    position:   relative;
+    padding:    0;
+    margin:     0 0 0 0;
+    text-align: center;
+}
+.footer {
+    flex-shrink: 0;
+    margin-top:  auto;
+    min-height:  30px;
+    position:    relative;
+    bottom:      0;
+    font-size:   x-small;
+    display:     block;
+    text-align:  center;
+}
+/******************** END FOOTER *********************/
+
+
+
+/******************** NEW POST ***********************/
+#new-post {
+    display: inherit; /* orig: none */
+}
+.dark {
+    background-color: black;
+    color:            white;
+}
+.dark:focus {
+    color:            #437C90;
+    background-color: black;
+    outline:          none;
+}
+.input-group-text {
+    background-color: black;
+    color:            white;
+}
+#form-header {
+    display: inherit; /* orig: none */
+}
+/******************* END NEW POST ********************/
+
+
+
+/* --------- POST-TYPE DROPDOWN MENU ----------------*/
+#select-post-dropdown {
+    padding: 0;
+}
+#post-dropdown {
+    padding:          0;
+    background-color: black;
+}
+.dropdown-menu {
+    width:   100%;
+    padding: 0;
+    outline: 1pt dashed white;
+}
+.dropdown-menu .dropdown-item.opt {
+    text-align:       center;
+    background-color: black;
+    color:            white;
+}
+.dropdown-menu .dropdown-item.opt:hover {
+    transition:       0.4s;
+    background-color: #F2010C;
+    color:            white;
+}
+.dropdown-menu.show {
+    width:     100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+#post-title {
+    font-weight:  bold;
+    font-variant: small-caps;
+    text-align:   center;
+}
+/*------------- END -- POST-TYPE DROPDOWN MENU-------*/
+
+
+
+/*-------------- FORM: HEARD ------------------------*/
+#form-type-heard {
+    display: none; /* orig: none */
+}
+#heard-dropdown-btn {
+    width:            100%;
+    background-color: black;
+    color:            white;
+}
+#rating-div {
+    border-right:  1pt inset white;
+    border-radius: 4pt;
+}
+/*-------------- END FORM: HEARD --------------------*/
+
+
+
+/*----------------FORM BUTTONS-----------------------*/
+#watched-form-button, #heard-form-button, #new-post-form-btn {
+    display:          block;
+    width:            inherit;
+    background-color: black;
+    border:           1px solid white;
+    color:            white;
+}
+#watched-form-button:hover, #heard-form-button:hover, #new-post-form-btn:hover {
+    transition:       0.4s;
+    background-color: #F2010C;
+    border:           1px solid white;
+    color:            white;
+}
+#watched-form-button:focus, #heard-form-button:focus, #new-post-form-btn:focus {
+    background-color: darkred;
+    border:           1px solid #F2010C;
+    color:            white;
+}
+/*---------------END FORM BUTTONS--------------------*/
+
+
+
+/*--------------- FORM: WATCHED ---------------------*/
+.watched-col {
+    display:     flex;
+    align-items: center;
+}
+.col-4.watched-col {
+    margin-left:  10px;
+    margin-right: -10px;
+}
+#watched-file-input {
+    color:            transparent;
+    padding:          0;
+    background-color: black;
+    width:            100%;
+    margin:           0;
+}
+.custom-file-upload {
+    border:  1px solid white;
+    display: inline;
+    cursor:  pointer;
+    padding: 6px 12px;
+    margin:  0;
+
+}
+#file-prepend-text {
+    padding-left:  14px;
+    padding-right: 14px;
+}
+input[type='file'] {
+    color:            transparent;
+    background-color: transparent;
+    display:          none; /* orig: none */
+}
+#file-input-label {
+    border-bottom-right-radius: 3pt;
+    border-top-right-radius:    3pt;
+}
+#form-type-watched, #watched-file-input-outer-div, #watched-url-input-div{
+    display: none; /* orig: none */
+}
+#watched-file-input-outer-div, #watched-url-input-div {
+    padding-right: 0;
+}
+#watched-submit-btn-div {
+    padding-left:  0;
+    padding-right: 0;
+}
+/*--------------- END FORM: WATCHED -----------------*/
+
+#dropdown-selection {
+    display: none;
+}
