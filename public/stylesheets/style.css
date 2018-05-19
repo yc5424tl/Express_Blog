@@ -296,7 +296,8 @@ footer {
 
 
 /* --------- POST-TYPE DROPDOWN MENU ----------------*/
-#select-post-dropdown {
+#select-post-dropdown-h, #select-post-dropdown-l,
+#select-post-dropdown-t, #select-post-dropdown-w {
     padding: 0;
 }
 #post-dropdown {
@@ -323,7 +324,7 @@ footer {
     max-width: 100%;
     min-width: 100%;
 }
-#post-title {
+#post-title-h, #post-title-l, #post-title-t, #post-title-w {
     font-weight:  bold;
     font-variant: small-caps;
     text-align:   center;
@@ -333,10 +334,10 @@ footer {
 
 
 /*-------------- FORM: HEARD ------------------------*/
-#form-type-heard {
+#form-type-h, #form-type-l, #form-type-t, #form-type-w {
     display: none; /* orig: none */
 }
-#heard-dropdown-btn {
+#dropdown-btn-l, #dropdown-btn-h, #dropdown-btn-t, #dropdown-btn-w {
     width:            100%;
     background-color: black;
     color:            white;
@@ -350,20 +351,20 @@ footer {
 
 
 /*----------------FORM BUTTONS-----------------------*/
-#watched-form-button, #heard-form-button, #new-post-form-btn {
+#submit-h, #submit-l, #submit-t, #submit-w {
     display:          block;
     width:            inherit;
     background-color: black;
     border:           1px solid white;
     color:            white;
 }
-#watched-form-button:hover, #heard-form-button:hover, #new-post-form-btn:hover {
+#submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover {
     transition:       0.4s;
     background-color: #F2010C;
     border:           1px solid white;
     color:            white;
 }
-#watched-form-button:focus, #heard-form-button:focus, #new-post-form-btn:focus {
+#submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus {
     background-color: darkred;
     border:           1px solid #F2010C;
     color:            white;
@@ -381,7 +382,7 @@ footer {
     margin-left:  10px;
     margin-right: -10px;
 }
-#watched-file-input {
+#file-input-w {
     color:            transparent;
     padding:          0;
     background-color: black;
@@ -396,7 +397,7 @@ footer {
     margin:  0;
 
 }
-#file-prepend-text {
+#file-prepend-text-w {
     padding-left:  14px;
     padding-right: 14px;
 }
@@ -405,22 +406,22 @@ input[type='file'] {
     background-color: transparent;
     display:          none; /* orig: none */
 }
-#file-input-label {
+#file-input-label-w {
     border-bottom-right-radius: 3pt;
     border-top-right-radius:    3pt;
 }
-#form-type-watched, #watched-file-input-outer-div, #watched-url-input-div{
+#form-type-w, #file-input-outer-div-w, #url-input-outer-div-w{
     display: none; /* orig: none */
 }
-#watched-file-input-outer-div, #watched-url-input-div {
+#file-input-outer-div-w, #url-input-inner-div-w {
     padding-right: 0;
 }
-#watched-submit-btn-div {
+#submit-div-w {
     padding-left:  0;
     padding-right: 0;
 }
 /*--------------- END FORM: WATCHED -----------------*/
 
-#dropdown-selection {
-    display: none;
-}
+/*#dropdown-selection {*/
+    /*display: none;*/
+/*}*/

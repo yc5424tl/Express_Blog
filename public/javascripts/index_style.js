@@ -1,7 +1,12 @@
-
+// let app = require('../../app.js');
 
 $(document).ready(function () {
 
+
+    // $('.typecast'.on('click', function() {
+    //     app.locals.postType = $(this).id;
+    //
+    // }));
 
     setInterval(function () {
         let dateTime;
@@ -43,13 +48,13 @@ $(document).ready(function () {
     });
 
 
-    $('#watched-check-url').change(function () {
-        $('#watched-url-input-div').toggle();
+    $('#url-check-w').change(function () {
+        $('#url-input-div-w').toggle();
     });
 
 
-    $('#watched-check-file').change(function () {
-        $('#watched-file-input-outer-div').toggle();
+    $('#file-check-w').change(function () {
+        $('#file-input-outer-div-w').toggle();
         setFileInputSize()
     });
 
@@ -70,10 +75,10 @@ function setFileInputSize() {
     let newWidth;
 
     prependWidth = ($('#file-prepend').width());
-    inputInnerDivWidth = ($('#watched-file-input-inner-div').width());
+    inputInnerDivWidth = ($('#file-input-inner-div-w').width());
     newWidth = (inputInnerDivWidth - prependWidth - 25);
 
-    $('#file-input-label').width(newWidth);
+    $('#file-input-label-w').width(newWidth);
 }
 
 
@@ -82,21 +87,21 @@ function getPostForm(postType) {
 
     switch (postType) {
 
-        case 'Today I Learned ':
+        case postType.slice(0,7) === 'learned':
             hideFormVars();
-            showFormVar('form-type-learned');
+            showFormVar('form-type-l');
             break;
-        case 'Today I Thought ':
+        case postType.slice(0,7) === 'thought':
             hideFormVars();
-            showFormVar('form-type-thought');
+            showFormVar('form-type-t');
             break;
-        case 'Today I Heard ':
+        case postType.slice(0,6) === 'heard':
             hideFormVars();
-            showFormVar('form-type-heard');
+            showFormVar('form-type-h');
             break;
-        case 'Today I Watched ':
+        case postType.slice(0,7) === 'watched':
             hideFormVars();
-            showFormVar('form-type-watched');
+            showFormVar('form-type-w');
             break;
         default:
             alert('Unexpected Error Rendering Form')
@@ -114,8 +119,17 @@ function hideFormVars() {
 function showFormVar(formId) {
     $('#' + formId).show();
 }
-
-
-$('.dropdown-menu .dropdown-item.opt').on('click', function() {
-    $('#dropdown-selection').text($(this).id);
-});
+//
+// let ddm = $('#ddm');
+// let dds = $('#dds');
+//
+// $(ddm.children.forEach(on('click', function() {
+//     dds.classList = '';
+//     dds.addClass(($(this.id)));
+// })));
+//
+//
+// $('#ddm > .dropdown-item.opt').on('click', function() {
+//     // $('#dropdown-selection').text($(this).id);
+//     $('dropdown-selection').attr = ($(this).id);
+// });
