@@ -1,29 +1,28 @@
-let createError = require('http-errors');
-let express = require('express');
+//let createError = require('http-errors');
+const express = require('express');
 let path = require('path');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
-let fs = require('fs');
 
-let expressWinston = require('express-winston');
-let winston = require('winston');
-// require('winston-loggly-bulk');
+let logger = require('morgan');
+let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
-let expressHbs = require('express-handlebars');
-let session = require('express-session');
-let flash = require('express-flash');
 let mongoose = require('mongoose');
+let flash = require('express-flash');
+let session = require('express-session');
+
+let fs = require('fs');
+let expressHbs = require('express-handlebars');
+let expressWinston = require('express-winston');
+let winston = require('winston');
+
 let db_url = process.env.NODE_BLOG_DB;
 let sess_sec = process.env.BLOG_SESS_SEC;
-
-
 mongoose.connect(db_url)
     .then( () => {console.log('Connected to mLab');})
     .catch( (err) => {console.log('Error connecting to mLab', err);});
-
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
@@ -33,11 +32,12 @@ let app = express();
 
 
 
+
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
 // view engine setup
 
-// app.set('views', path.join(__dirname, 'views')); replaced with following line
+//app.set('views', path.join(__dirname, 'views')); //replaced with following line
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
@@ -50,7 +50,7 @@ app.use(bodyParser.urlencoded({extended: false})); //added by me
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: sess_sec, resave: false, saveUninitialized: false}));
 app.use(flash());
-app.use(createError);
+//app.use(createError);
 
 
 // app.use('/views', express.static('views'));
@@ -119,3 +119,6 @@ app.use(function(err, req, res) {
 
 
 module.exports = app;
+
+
+

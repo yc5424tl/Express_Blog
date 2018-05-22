@@ -1,11 +1,8 @@
 
-// let app = require('../app.js');
+// const express = require('express');
+// const router = express.Router();
 let express = require('express');
 let router = express.Router();
-// let bodyParser = require('body-parser');
-let flash = require('express-flash');
-
-
 let LearnedData = require('../models/learnedModel');
 let ThoughtData = require('../models/thoughtModel');
 let WatchedData = require('../models/watchedModel');
@@ -14,7 +11,12 @@ let HeardData   = require('../models/heardModel');
 
 
 /* GET home page. */
-router.get('/', function(req, res) {
+// router.use('/', function(req, res) {
+//     res.render('index', {title: 'Home'});
+// });
+
+
+router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
@@ -382,3 +384,5 @@ function buildLearnedPost(req, res) {
 
 
 module.exports = router;
+
+

@@ -5,44 +5,55 @@
 
 
 
-    <!--&lt;!&ndash;-----------FORM: HEADER-----------------&ndash;&gt;-->
-    <!--<form id="form-header">-->
-        <!--<div class="form-group" id="select-post-type-div">-->
-            <!--<div class="input-group">-->
-                <!--<div class="input-group-prepend">-->
-                    <!--<div class="input-group-text">Type</div>-->
-                <!--</div>-->
-                <!--<label class="control-label" for="select-post-dropdown"></label>-->
-                <!--<div class="dropdown form-control dark" id="select-post-dropdown">-->
-                    <!--<button class="btn dropdown-toggle"-->
-                            <!--type="button"-->
-                            <!--id="heard-dropdown-btn"-->
-                            <!--data-toggle="dropdown">-->
-                            <!--Select</button>-->
-                    <!--<div class="dropdown-menu" role="menu">-->
-                        <!--<a class="dropdown-item opt" role="menuitem" name="Today I Learned " href="#">Today I Learned</a>-->
-                        <!--<a class="dropdown-item opt" role="menuitem" name="Today I Thought " href="#">Today I Thought</a>-->
-                        <!--<a class="dropdown-item opt" role="menuitem" name="Today I Heard " href="#">Today I Heard</a>-->
-                        <!--<a class="dropdown-item opt" role="menuitem" name="Today I Watched " href="#">Today I Watched</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group" id="post-title-div">-->
-            <!--<div class="input-group">-->
-                <!--<div class="input-group-prepend">-->
-                    <!--<div class="input-group-text">Title</div>-->
-                <!--</div>-->
-                <!--<label class="control-label" for="post-title"></label>-->
-                <!--<input type="text" class="form-control dark" id="post-title">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" for="post-body"></label>-->
-            <!--<textarea class="form-control dark" id="post-body" rows="12"></textarea>-->
-        <!--</div>-->
-    <!--</form>-->
-    <!--&lt;!&ndash;-----------END FORM: HEADER-------------&ndash;&gt;-->
+    <!-------------FORM: HEADER------------------->
+    <form id="form-header" class="form-var">
+        <div class="form-group" id="select-post-type-x">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Type</div>
+                </div>
+                <label class="control-label" for="select-post-dropdown-x"></label>
+                <div class="dropdown form-control dark" id="select-post-dropdown-x">
+                    <button class="btn dropdown-toggle"
+                            type="button"
+                            id="dropdown-btn-x"
+                            data-toggle="dropdown">
+                            Select
+                    </button>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item opt" role="menuitem" name="Learned" href="#">Today I Learned</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Thought" href="#">Today I Thought</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Heard" href="#">Today I Heard</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Watched" href="#">Today I Watched</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="post-title-div-x">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Title</div>
+                </div>
+                <label class="control-label" for="post-title-x"></label>
+                <input type="text" class="form-control dark" id="post-title-x">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="post-body-x"></label>
+            <textarea class="form-control dark" id="post-body-x" rows="12"></textarea>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group x-form">
+                    <label for="submit-x"></label>
+                    <div class="input-group">
+                        <button type="submit" class="btn post-btn" id="submit-x">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-------------END FORM: HEADER--------------->
 
 
 
@@ -63,10 +74,10 @@
                             Select
                     </button>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item opt" role="menuitem" name="learned-h" href="#">Today I Learned</a>
-                        <a class="dropdown-item opt" role="menuitem" name="thought-h" href="#">Today I Thought</a>
-                        <a class="dropdown-item opt" role="menuitem" name="heard-h " href="#">Today I Heard</a>
-                        <a class="dropdown-item opt" role="menuitem" name="watched-h " href="#">Today I Watched</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Learned" href="#">Today I Learned</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Thought" href="#">Today I Thought</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Heard" href="#">Today I Heard</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Watched" href="#">Today I Watched</a>
                     </div>
                 </div>
             </div>
@@ -187,16 +198,12 @@
                 </div>
                 <label class="control-label" for="select-post-dropdown-w"></label>
                 <div class="dropdown form-control dark" id="select-post-dropdown-w">
-                    <button class="btn dropdown-toggle"
-                            type="button"
-                            id="dropdown-btn-w"
-                            data-toggle="dropdown">
-                        Select</button>
+                    <button class="btn dropdown-toggle" type="button" id="dropdown-btn-w" data-toggle="dropdown">Select</button>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item opt" role="menuitem" name="learned-w" href="#">Today I Learned</a>
-                        <a class="dropdown-item opt" role="menuitem" name="thought-w " href="#">Today I Thought</a>
-                        <a class="dropdown-item opt" role="menuitem" name="heard-w " href="#">Today I Heard</a>
-                        <a class="dropdown-item opt" role="menuitem" name="watched-w " href="#">Today I Watched</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Learned" href="#">Today I Learned</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Thought" href="#">Today I Thought</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Heard" href="#">Today I Heard</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Watched" href="#">Today I Watched</a>
                     </div>
                 </div>
             </div>
@@ -308,10 +315,10 @@
                         data-toggle="dropdown">
                     Select</button>
                 <div class="dropdown-menu" role="menu">
-                    <a class="dropdown-item opt" role="menuitem" name="learned-l" href="#">Today I Learned</a>
-                    <a class="dropdown-item opt" role="menuitem" name="thought-l" href="#">Today I Thought</a>
-                    <a class="dropdown-item opt" role="menuitem" name="heard-l" href="#">Today I Heard</a>
-                    <a class="dropdown-item opt" role="menuitem" name="watched-l" href="#">Today I Watched</a>
+                    <a class="dropdown-item opt" role="menuitem" name="Learned" href="#">Today I Learned</a>
+                    <a class="dropdown-item opt" role="menuitem" name="Thought" href="#">Today I Thought</a>
+                    <a class="dropdown-item opt" role="menuitem" name="Heard" href="#">Today I Heard</a>
+                    <a class="dropdown-item opt" role="menuitem" name="Watched" href="#">Today I Watched</a>
                 </div>
             </div>
         </div>
@@ -363,10 +370,10 @@
                             data-toggle="dropdown">
                         Select</button>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item opt" role="menuitem" name="learned-t" href="#">Today I Learned</a>
-                        <a class="dropdown-item opt" role="menuitem" name="thought-t" href="#">Today I Thought</a>
-                        <a class="dropdown-item opt" role="menuitem" name="heard-t" href="#">Today I Heard</a>
-                        <a class="dropdown-item opt" role="menuitem" name="watched-t" href="#">Today I Watched</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Learned" href="#">Today I Learned</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Thought" href="#">Today I Thought</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Heard" href="#">Today I Heard</a>
+                        <a class="dropdown-item opt" role="menuitem" name="Watched" href="#">Today I Watched</a>
                     </div>
                 </div>
             </div>
@@ -384,7 +391,6 @@
             <label class="control-label" for="post-body-t"></label>
             <textarea class="form-control dark" id="post-body-t" rows="12" name="thoughtBody"></textarea>
         </div>
-        // end header
         <div class="row">
             <div class="col-12" id="submit-div-t">
                 <div class="form-group">
@@ -433,7 +439,7 @@
 
 
 
-<!--<div id="new-post">-->
+ <!--<div id="new-post">-->
     <!--<h1>New Post</h1>-->
 
     <!--&lt;!&ndash;-----------FORM: HEADER-----------------&ndash;&gt;-->
@@ -621,64 +627,64 @@
                     <!--</div>-->
                 <!--</div>-->
             <!--</div>-->
-            <!--&lt;!&ndash; END ROW: FILE CHECK & INPUT &ndash;&gt;-->
+             <!--END ROW: FILE CHECK & INPUT -->
 
 
-            <!--&lt;!&ndash;&lt;!&ndash; ROW: WATCHED SUBMIT BUTTON &ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="col-12" id="watched-submit-btn-div">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<label for="watched-form-button"></label>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<button type="submit" class="btn post-btn" id="watched-form-button">Post</button>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;&lt;!&ndash; END ROW: WATCHED SUBMIT BUTTON &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash; ROW: WATCHED SUBMIT BUTTON &ndash;&gt;-->
+            <!--<div class="row">-->
+                <!--<div class="col-12" id="watched-submit-btn-div">-->
+                    <!--<div class="form-group">-->
+                        <!--<div class="input-group">-->
+                            <!--<label for="watched-form-button"></label>-->
+                            <!--<button type="submit" class="btn post-btn" id="watched-form-button">Post</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; END ROW: WATCHED SUBMIT BUTTON &ndash;&gt;-->
 
 
         <!--</div>-->
-        <!--&lt;!&ndash;---------- END FORM WATCHED ------------&ndash;&gt;-->
+        <!------------ END FORM WATCHED -------------->
 
 
 
-        <!--&lt;!&ndash;&lt;!&ndash; THOUGHT SUBMIT BUTTON &ndash;&gt;&ndash;&gt;-->
-        <!--&lt;!&ndash;<div id="form-type-thought" class="row form-var">&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="col-12" id="thought-submit-btn-div">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<label for="thought-form-button"></label>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<button type="submit" class="btn post-btn" id="thought-form-button">Post</button>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash; THOUGHT SUBMIT BUTTON &ndash;&gt;-->
+        <!--<div id="form-type-thought" class="row form-var">-->
+            <!--<div class="col-12" id="thought-submit-btn-div">-->
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
+                        <!--<label for="thought-form-button"></label>-->
+                        <!--<button type="submit" class="btn post-btn" id="thought-form-button">Post</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
-        <!--&lt;!&ndash;&lt;!&ndash; END THOUGHT SUBMIT BUTTON &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash; END THOUGHT SUBMIT BUTTON &ndash;&gt;-->
 
 
-        <!--&lt;!&ndash; LEARNED SUBMIT BUTTON &ndash;&gt;-->
-        <!--&lt;!&ndash;<div id="form-type-learned" class="row form-var">&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="col-12" id="learned-submit-btn-div">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<label for="learned-form-button"></label>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<button type="submit" class="btn post-btn" id="learned-form-button">Post</button>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;&lt;!&ndash; END LEARNED SUBMIT BUTTON &ndash;&gt;&ndash;&gt;-->
+         <!--LEARNED SUBMIT BUTTON -->
+        <!--<div id="form-type-learned" class="row form-var">-->
+            <!--<div class="col-12" id="learned-submit-btn-div">-->
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
+                        <!--<label for="learned-form-button"></label>-->
+                        <!--<button type="submit" class="btn post-btn" id="learned-form-button">Post</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; END LEARNED SUBMIT BUTTON &ndash;&gt;-->
 
         <!--<div id="submit-btn-div" class="row">-->
             <!--<div class="col-12 form-group input-group">-->
-                <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
+                <!--<div class="form-group">-->
+                    <!--<div class="input-group">-->
                         <!--<label for="submit-btn"></label>-->
                         <!--<button type="submit" class="btn post-btn" id="new-post-form-btn">Post</button>-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
             <!--</div>-->
         <!--</div>-->
 

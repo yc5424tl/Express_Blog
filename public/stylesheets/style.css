@@ -297,7 +297,8 @@ footer {
 
 /* --------- POST-TYPE DROPDOWN MENU ----------------*/
 #select-post-dropdown-h, #select-post-dropdown-l,
-#select-post-dropdown-t, #select-post-dropdown-w {
+#select-post-dropdown-t, #select-post-dropdown-w,
+#select-post-dropdown-x{
     padding: 0;
 }
 #post-dropdown {
@@ -324,7 +325,7 @@ footer {
     max-width: 100%;
     min-width: 100%;
 }
-#post-title-h, #post-title-l, #post-title-t, #post-title-w {
+#post-title-h, #post-title-l, #post-title-t, #post-title-w, #post-title-x {
     font-weight:  bold;
     font-variant: small-caps;
     text-align:   center;
@@ -337,7 +338,7 @@ footer {
 #form-type-h, #form-type-l, #form-type-t, #form-type-w {
     display: none; /* orig: none */
 }
-#dropdown-btn-l, #dropdown-btn-h, #dropdown-btn-t, #dropdown-btn-w {
+#dropdown-btn-l, #dropdown-btn-h, #dropdown-btn-t, #dropdown-btn-w, #dropdown-btn-x {
     width:            100%;
     background-color: black;
     color:            white;
@@ -351,20 +352,20 @@ footer {
 
 
 /*----------------FORM BUTTONS-----------------------*/
-#submit-h, #submit-l, #submit-t, #submit-w {
+#submit-h, #submit-l, #submit-t, #submit-w, #submit-x {
     display:          block;
     width:            inherit;
     background-color: black;
     border:           1px solid white;
     color:            white;
 }
-#submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover {
+#submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover, #submit-x:hover {
     transition:       0.4s;
     background-color: #F2010C;
     border:           1px solid white;
     color:            white;
 }
-#submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus {
+#submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus, #submit-x:focus {
     background-color: darkred;
     border:           1px solid #F2010C;
     color:            white;

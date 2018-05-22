@@ -85,24 +85,36 @@ function setFileInputSize() {
 
 function getPostForm(postType) {
 
+    // let flash = require('express-flash');
+    // flash(postType.toString());
+    // console.log(postType.toString());
+
     switch (postType) {
 
-        case postType.slice(0,7) === 'learned':
+        case 'Learned':
             hideFormVars();
             showFormVar('form-type-l');
+            // console.log(postType.toString());
             break;
-        case postType.slice(0,7) === 'thought':
+
+        case 'Thought':
             hideFormVars();
             showFormVar('form-type-t');
+            console.log(postType.toString());
             break;
-        case postType.slice(0,6) === 'heard':
+
+        case 'Heard':
             hideFormVars();
             showFormVar('form-type-h');
+            console.log(postType.toString());
             break;
-        case postType.slice(0,7) === 'watched':
+
+        case 'Watched':
             hideFormVars();
             showFormVar('form-type-w');
+            console.log(postType.toString());
             break;
+
         default:
             alert('Unexpected Error Rendering Form')
     }
