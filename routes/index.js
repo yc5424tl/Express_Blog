@@ -66,13 +66,28 @@ router.get('/learned', function(req, res) {
     });
 });
 
-
+router.get('/heardPost/:_id', function(req, res, next) {
+    HeardData.findById(req.params._id)
+        .then( (post) => {
+            if(post) {
+                // res.render('../views/view_single_heard.hbs', {post: post});
+                res.render('view_single_heard', { post: post });
+            }
+            else {
+                next();
+            }
+        })
+        .catch( (err) => {
+            next(err);
+        });
+});
 
 router.get('/learned/:_id', function(req, res, next) {
     LearnedData.findById(req.params._id)
         .then( (post) => {
             if(post) {
-                res.render('../views/view_single_learned.hbs', {post: post});
+                // res.render('../views/view_single_learned.hbs', {post: post});
+                res.render('view_single_learned', { post: post });
             }
             else {
                 next();
@@ -89,7 +104,8 @@ router.get('/thought/:_id', function(req, res, next) {
     ThoughtData.findById(req.params._id)
         .then( (post) => {
             if(post) {
-                res.render('../views/view_single_thought.hbs', {post: post});
+                // res.render('../views/view_single_thought.hbs', {post: post});
+                res.render('view_single_thought', { post: post });
             }
             else {
                 next();
@@ -102,20 +118,21 @@ router.get('/thought/:_id', function(req, res, next) {
 
 
 
-router.get('/heard/:_id', function(req, res, next) {
-    HeardData.findById(req.params._id)
-        .then( (post) => {
-            if(post) {
-                res.render('../views/view_single_heard.hbs', {post: post});
-            }
-            else {
-                next();
-            }
-        })
-        .catch( (err) => {
-            next(err);
-        });
-    });
+// router.get('/heard/:_id', function(req, res, next) {
+//     HeardData.findById(req.params._id)
+//         .then( (post) => {
+//             if(post) {
+//                 // res.render('../views/view_single_heard.hbs', {post: post});
+//                 res.render('view_single_heard', { post: post });
+//             }
+//             else {
+//                 next();
+//             }
+//         })
+//         .catch( (err) => {
+//             next(err);
+//         });
+//     });
 
 
 
@@ -123,7 +140,8 @@ router.get('/watched/:_id', function(req, res, next) {
     WatchedData.findById(req.params._id)
         .then( (post) => {
             if(post) {
-                res.render('../views/view_single_watched.hbs', {post: post});
+                // res.render('../views/view_single_watched.hbs', {post: post});
+                res.render('view_single_watched', { post: post });
             }
             else {
                 next();
