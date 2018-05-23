@@ -23,15 +23,11 @@ mongoose.connect(db_url)
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-
+let routes = require('./routes');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
 let app = express();
-
-
-
-
 
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 

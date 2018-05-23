@@ -1,12 +1,6 @@
-// let app = require('../../app.js');
 
 $(document).ready(function () {
 
-
-    // $('.typecast'.on('click', function() {
-    //     app.locals.postType = $(this).id;
-    //
-    // }));
 
     setInterval(function () {
         let dateTime;
@@ -62,11 +56,7 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         setFileInputSize()
         });
-
 });
-
-
-
 
 function setFileInputSize() {
 
@@ -85,34 +75,26 @@ function setFileInputSize() {
 
 function getPostForm(postType) {
 
-    // let flash = require('express-flash');
-    // flash(postType.toString());
-    // console.log(postType.toString());
-
     switch (postType) {
 
         case 'Learned':
             hideFormVars();
             showFormVar('form-type-l');
-            // console.log(postType.toString());
             break;
 
         case 'Thought':
             hideFormVars();
             showFormVar('form-type-t');
-            console.log(postType.toString());
             break;
 
         case 'Heard':
             hideFormVars();
             showFormVar('form-type-h');
-            console.log(postType.toString());
             break;
 
         case 'Watched':
             hideFormVars();
             showFormVar('form-type-w');
-            console.log(postType.toString());
             break;
 
         default:
@@ -131,17 +113,3 @@ function hideFormVars() {
 function showFormVar(formId) {
     $('#' + formId).show();
 }
-//
-// let ddm = $('#ddm');
-// let dds = $('#dds');
-//
-// $(ddm.children.forEach(on('click', function() {
-//     dds.classList = '';
-//     dds.addClass(($(this.id)));
-// })));
-//
-//
-// $('#ddm > .dropdown-item.opt').on('click', function() {
-//     // $('#dropdown-selection').text($(this).id);
-//     $('dropdown-selection').attr = ($(this).id);
-// });
