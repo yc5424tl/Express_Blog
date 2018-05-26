@@ -127,16 +127,6 @@ div {
 #sidebar-div > ul {
     list-style: none;
 }
-/*@media all and (min-width:1276px) {*/
-/*#sidebar-div {*/
-/*col-xl: 3;*/
-/*}*/
-/*}*/
-/*@media all and (min-width:639px){*/
-/*#sidebar-div > .col-sm{*/
-/*column-count: 4;*/
-/*}*/
-/*}*/
 /****************** END SIDEBAR **********************/
 
 
@@ -423,6 +413,3 @@ input[type='file'] {
 }
 /*--------------- END FORM: WATCHED -----------------*/
 
-/*#dropdown-selection {*/
-    /*display: none;*/
-/*}*/

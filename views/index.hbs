@@ -1,4 +1,23 @@
 
+<div id="new-posts">
+    {{#if posts}}
+        <ul>
+            {{#each posts}}
+                <li class="new-post-li">
+                    <div class="front-page-new-post">
+                        <p>{{this.post_title}}</p>
+                        <p class="author-time">
+                            Posted by {{this.post_author}} @ {{this.date_created}}</p>
+                        {{#if date_last_edit}}Edited: {{this.date_last_edit}}{{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No New Posts</p>
+    {{/if}}
+</div>
+
 
 <div id="home-page">
     <h1>Today I...</h1>

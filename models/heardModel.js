@@ -1,7 +1,6 @@
 
 'use strict';
 
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -27,7 +26,4 @@ HeardSchema.virtual('url').get(function() {
     return '/heard/' + this._id;
 });
 
-
-//module.exports = mongoose.model('Heard', HeardSchema);
 module.exports = HeardPosts;
-// mongoose.model('Heard', HeardSchema);

@@ -72,7 +72,6 @@ function setFileInputSize() {
 }
 
 
-
 function getPostForm(postType) {
 
     switch (postType) {
@@ -101,7 +100,6 @@ function getPostForm(postType) {
             alert('Unexpected Error Rendering Form')
     }
 }
-
 
 function hideFormVars() {
     $('.form-var').each(function () {

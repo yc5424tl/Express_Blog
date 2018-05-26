@@ -16,6 +16,4 @@ ThoughtSchema.virtual('url').get(function() {
     return '/thought/' + this._id;
 });
 
-
-//module.exports = mongoose.model('Thought', ThoughtSchema);
 module.exports = ThoughtPosts;

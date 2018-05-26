@@ -18,6 +18,4 @@ WatchedSchema.virtual('url').get(function() {
     return '/watched/' + this._id;
 });
 
-
-//module.exports = mongoose.model('Watched', WatchedSchema);
 module.exports = WatchedPosts;
