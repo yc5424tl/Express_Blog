@@ -1,22 +1,100 @@
 
-<div id="new-posts">
-    {{#if posts}}
-        <ul>
-            {{#each posts}}
-                <li class="new-post-li">
-                    <div class="front-page-new-post">
-                        <p>{{this.post_title}}</p>
-                        <p class="author-time">
-                            Posted by {{this.post_author}} @ {{this.date_created}}</p>
-                        {{#if date_last_edit}}Edited: {{this.date_last_edit}}{{/if}}
-                    </div>
-                </li>
-            {{/each}}
-        </ul>
+
+<div class="post-container" id="latest-heard">
+    {{#if heard}}
+        {{#each heard}}
+                <h3 class="post-title">{{post_title}}</h3>
+                <p class="post-body">{{post_body}}</p>
+                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+                {{#if heard.date_last_edit}}
+                    <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                {{/if}}
+        {{/each}}
     {{else}}
-        <p>No New Posts</p>
+        <p>No Today I Heard Posts</p>
     {{/if}}
 </div>
+
+
+
+
+<div class="post-container" id="latest-learned">
+    {{#if learned}}
+        {{#each learned}}
+            <h3 class="post-title">{{post_title}}</h3>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if learned.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Learned Posts</p>
+    {{/if}}
+</div>
+
+
+
+
+<div class="post-container" id="latest-thought">
+    {{#if thought}}
+        {{#each thought}}
+            <h3 class="post-title">{{post_title}}</h3>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if thought.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Thought Posts</p>
+    {{/if}}
+</div>
+
+
+
+
+<div class="post-container" id="latest-watched">
+    {{#if watched}}
+        {{#each watched}}
+            <h3 class="post-title">{{post_title}}</h3>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if watched.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Watched Posts</p>
+    {{/if}}
+</div>
+
+<hr>
+
+
+
+
+
+<!--<div id="new-posts">-->
+    <!--{ {#if posts}}-->
+        <!--<ul>-->
+            <!--{ {#each posts}}-->
+                <!--<li class="new-post-li">-->
+                    <!--<div class="front-page-new-post">-->
+                        <!--<p>{ {this.post_title}}</p>-->
+                        <!--<p class="author-time">-->
+                            <!--Posted by { {this.post_author}} @ { {this.date_created}}</p>-->
+                        <!--{ {#if date_last_edit}}Edited: { {this.date_last_edit}}{ {/if}}-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--{ {/each}}-->
+        <!--</ul>-->
+    <!--{ {else}}-->
+        <!--<p>No New Posts</p>-->
+    <!--{ {/if}}-->
+<!--</div>-->
+
+
 
 
 <div id="home-page">

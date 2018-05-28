@@ -2,52 +2,128 @@
 
 let express     = require('express');
 let router      = express.Router();
-let mongoose    = require('mongoose');
 let flash       = require('express-flash');
-let util        = require('util');
 let LearnedData = require('../models/learnedModel');
+let async       = require('async');
 
 
-let HeardData  = require('../models/heardModel');
+let HeardData   = require('../models/heardModel');
 let ThoughtData = require('../models/thoughtModel');
 let WatchedData = require('../models/watchedModel');
 
-let Learned = new LearnedData();
-
-
-
 /* GET home page. */
+//router.get('/', function(req, res, next) {
+    // LearnedData.find({}, null, { sort: '-date', limit: 1 }).then( (post) =>{
+    //     for (prop in post) {
+    //         if(post.hasOwnProperty(prop)) {
+    //             alert("prop: " + prop + " value: " + post[prop]);
+    //     }
+    //
+    //     recentPosts.push(post).then( HeardData.find({}, null, { sort: '-date', limit: 1 }).then( (heardPost) => {
+    //         recentPosts.push(heardPost).then( ThoughtData.find({}, null, { sort: '-date', limit: 1 }).then( (thoughtPost) => {
+    //             recentPosts.push(thoughtPost).then( WatchedData.find( {}, null, { sort: '-date', limit: 1 }).then( (watchedPost) => {
+    //                 recentPosts.push(watchedPost).then(res.render('index', { posts: [heardPost, thoughtPost, watchedPost, post] }))
+    //             }))
+    //         }))
+    //     }));
+        // console.log('=======================================' +
+        //     '==============================================================');
+        // console.log(recentPosts);
+        // res.render('index', { posts:recentPosts.pop() });
+    // LearnedData.find({}, null, { sort: '-date', limit: 1 }).then( (post) => {
+    //     recentPosts['learned'] = post;
+
 
 router.get('/', function(req, res, next) {
 
-    //let recentPosts = {};
-    let recentPosts = [];
-    // let learned = util.inspect(LearnedData.find( {}, null, {sort: '-date', limit: 1}));
+    let heardPost;
+    let thoughtPost;
+    let learnedPost;
+    let watchedPost;
 
-    LearnedData.find({}, null, {sort: '-date', limit: 1}, function (err, post) {
-        console.log('inner learned = ' + post);
-        //recentPosts['Learned'] = post;
-        recentPosts.push(post);
-        res.render('index', { posts: recentPosts[0]});
-        // res.render('index', {posts: recentPosts['Learned']});
+    let postArray = [];
+        ThoughtData.find( {}, null, { sort: '-date', limit: 1 }, function(err, postArray, recentThought) {
+            const frozenThought = Object.freeze(recentThought)
+            return Object.freeze(postArray.concat(recentThought));
     });
 
-    // HeardData.find({}, null, { sort: '-date', limit: 1 }, function (err, post) {
-    //     console.log('heard: ' + post);
-    //     //recentPosts['Heard'] = post;
-    //     recentPosts.push(post);
-    //     // res.render('index', {posts: Object.values(recentPosts)});
-    //     res.render('index', { posts: recentPosts });
-    // });
-    //
-    // recentPosts['Learned'] = learned;
-    // console.log('Outer learned = ' + learned);
 
-        // console.log('post = ' + post);
-        // console.log(recentPosts['Learned']);
+
+    async.series([function (callback) {
+        ThoughtData.find({}, null, {sort: '-date', limit: 1}, function (err, latestThought) {
+            console.log('latestThought => ');
+            console.log(latestThought);
+            if (err) {
+                console.log('Error retrieving most recent Thought post.');
+                return callback(err);
+            }
+            thoughtPost = latestThought;
+            callback(null, latestThought);
+        })
+    }, function (callback) {
+        HeardData.find({}, null, {sort: '-date', limit: 1}, function (err, latestHeard) {
+            console.log('latestHeard => ');
+            console.log(latestHeard);
+            if (err) {
+                console.log('Error retrieving most recent Heard post.');
+                return callback(err);
+            }
+            heardPost = latestHeard;
+            callback(null, latestHeard);
+        })
+    }, function (callback) {
+        LearnedData.find({}, null, {sort: '-date', limit: 1}, function (err, latestLearned) {
+            console.log('latestLearned => ');
+            console.log(latestLearned);
+            if (err) {
+                console.log('Error retrieving most recent Learned post.');
+                return callback(err);
+            }
+            learnedPost = latestLearned;
+            callback(null, latestLearned);
+        })
+    }, function (callback) {
+        WatchedData.find({}, null, {sort: '-date', limit: 1}, function (err, latestWatched) {
+            console.log('latestWatched => ');
+            console.log(latestWatched);
+            if (err) {
+                console.log('Error retrieving most recent Watched post.');
+                return callback(err);
+            }
+            watchedPost = latestWatched;
+            callback(null, latestWatched);
+        })
+    }
+    ], function (err) {
+        console.log('Pre-Render = ');
+        console.log(heardPost);
+        console.log(learnedPost);
+        console.log(thoughtPost);
+        console.log(watchedPost);
+        console.log('End Pre-Render');
+
+
+        res.render('index', {heard: heardPost, learned: learnedPost, thought: thoughtPost, watched: watchedPost});
+    });
 });
 
-    //res.render('index', {posts: recentPosts['Learned']});
+
+
+
+
+function getLearned() {
+    LearnedData.find({}, null, { sort: '-date', limit: 1 }).then( (post) => {
+        recentPosts['learned'] = post;
+    })
+}
+
+
+function getHeard() {
+    HeardData.find({}, null, { sort: '-date', limit: 1 }).then( (heardPost) => {
+        recentPosts['heard'] = heardPost;
+    })
+}
+
 
 
 

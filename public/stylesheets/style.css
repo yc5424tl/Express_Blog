@@ -2,6 +2,7 @@
 html {
     width: 100%;
 }
+
 body {
     font-family:      'Reem Kufi', sans-serif;
     font-size:        large;
@@ -11,6 +12,7 @@ body {
     background-color: black;
     color:            white;
 }
+
 #body {
     margin:           0 auto;
     background-color: black;
@@ -413,3 +415,40 @@ input[type='file'] {
 }
 /*--------------- END FORM: WATCHED -----------------*/
 
+.post-container {
+    border-top: 3pt ridge #38423B;
+    margin: 4% 6% 4% 6%;
+}
+
+.post-title {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-weight: 800;
+}
+
+hr {
+    color: white;
+    background-color: goldenrod;
+    margin-bottom: 7%;
+}
+
+sub {
+    color: #F2010C;
+}
+
+.post-body {
+    color: #437C90;
+ }
+
+.post-link {
+    color: #F2010C;
+    font-size: xx-large;
+}
+
+ul {
+    list-style: none;
+}
+
+.heard-post-div, .learned-post-div, .thought-post-div, .watched-post-div {
+    border-top: 3pt ridge #38423B;
+}

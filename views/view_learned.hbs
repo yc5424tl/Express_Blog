@@ -5,7 +5,7 @@
             {{#each posts}}
                 <li class="learned-post-1i">
                     <div class="learned-post-div">
-                        <a href="learned/{{this.id}}">{{this.post_title}}</a>
+                        <a class="post-link" href="learned/{{this.id}}">{{this.post_title}}</a>
                         <p class="author-time">
                             Posted by {{this.post_author}} @ {{this.date_created}}</p>
                         {{#if date_last_edit}}Edited: {{this.date_last_edit}}{{/if}}
