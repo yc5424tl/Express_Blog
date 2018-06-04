@@ -23,12 +23,15 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 let indexRouter     = require('./routes/index');
 let usersRouter     = require('./routes/users');
+let crudRouter      = require('./routes/update');
 let app             = express();
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+
 app.use(logger('combined', {stream: accessLogStream})); // combined, common, dev, short, tiny
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -41,6 +44,7 @@ app.use(flash());
 app.use(expressWinston.logger({transports: [new winston.transports.Console({json: true, colorize: true}),]}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/edit', crudRouter);
 app.use(expressWinston.errorLogger({transports: [new winston.transports.Console({json: true, colorize: true})]}));
 
 
@@ -70,7 +74,7 @@ app.use(function(err, req, res) {
 });
 
 
-module.exports = app;
+module.exports = app; expressHbs();
 
 
 

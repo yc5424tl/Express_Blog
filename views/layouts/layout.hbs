@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <title>Kater Bater's Blog {{title}}</title>
@@ -7,18 +7,20 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           rel="stylesheet"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
           crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|La+Belle+Aurore|Reem+Kufi"
+          rel="stylesheet">
 
     <link href="/stylesheets/style.css"
           rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|La+Belle+Aurore|Reem+Kufi"
-          rel="stylesheet">
 </head>
 
 {{!< LAYOUT}}
@@ -28,7 +30,9 @@
 <nav class="navbar navbar-dark" role="navigation">
     <div class="container-fluid">
 
-        <button id='sidebar-toggle-button' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarToggle"/>
+        <button id='sidebar-toggle-button' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarToggle">
+            <span class="navbar-toggler-icon pull-right"> </span>
+        </button>
 
         <form class="form-inline navbar-form" id="nav-login-form">
 
@@ -80,18 +84,19 @@
 
         <div class="col">
             <div id="content" class="container-fluid">
-                <div id="content-left" class="col-lg-5 col-md-10 col-sm-12 flex-item equal-width">
+                <div id="content-left" class="col-lg-6 col-md-10 col-sm-12 flex-item equal-width">
+                    <!--<img id="content-left-img" class="img-responsive" src="/images/brickBackground.jpg">-->
                     {{{body}}}
                     <footer class="footer">
                         <div id="footer-div">
                             <p class="footer-block">
-                                <span id="date-time-span"></span> Jacob Boline 2018
+                                <span id="date-time-span"> </span> Jacob Boline 2018
                                 <a href="https://github.com/yc5424tl/kater_bater_blog">this.github</a>
                             </p>
                         </div>
                     </footer>
                 </div> <!--END CONTENT-LEFT--->
-                <div id="content-right" class="col-lg-5 col-md-10 col-sm-12 flex-item equal-width">
+                <div id="content-right" class="col-lg-6 col-md-10 col-sm-12 flex-item equal-width">
                     <img id="content-right-img" class="img-responsive" src="/images/background-3203817.jpg">
                 </div><!--END CONTENT-RIGHT-->
             </div><!-- END CONTAINER-FLUID -->
@@ -112,9 +117,8 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 
-<script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
 <script src="/javascripts/index_style.js"></script>

@@ -1,0 +1,22 @@
+
+<div id="heard-post-list">
+    <h2 class="section-title">Today I Heard...</h2>
+    {{#if posts}}
+        <ul>
+            {{#each posts}}
+                <li class="heard-post-li">
+                    <div class="post-container">
+                        <a class="post-link" href="heard/{{this._id}}">{{this.post_title}}</a>
+                        <p class="post-preview">{{post_body}}</p>
+                        <h6 class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</h6>
+                        {{#if date_last_edit}}<p>Edited: {{this.date_last_edit}}{{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No 'Today I Heard' Posts</p>
+    {{/if}}
+</div>
+
+

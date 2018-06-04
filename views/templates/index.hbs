@@ -1,0 +1,127 @@
+
+
+<div class="post-container" id="latest-heard">
+    {{#if heard}}
+        {{#each heard}}
+                <a class="post-link" href="heard/{{id}}"><span class="post-title">{{post_title}}</span></a>
+                <p class="post-body">{{post_body}}</p>
+                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+                {{#if heard.date_last_edit}}
+                    <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Heard Posts</p>
+    {{/if}}
+</div>
+
+
+
+
+<div class="post-container" id="latest-learned">
+    {{#if learned}}
+        {{#each learned}}
+            <a class="post-link" href="learned/{{id}}"><span class="post-title">{{post_title}}</span></a>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if learned.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Learned Posts</p>
+    {{/if}}
+</div>
+
+
+
+
+<div class="post-container" id="latest-thought">
+    {{#if thought}}
+        {{#each thought}}
+            <a class="post-link" href="thought/{{id}}"><span class="post-title">{{post_title}}</span></a>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if thought.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Thought Posts</p>
+    {{/if}}
+</div>
+
+
+
+
+<div class="post-container" id="latest-watched">
+    {{#if watched}}
+        {{#each watched}}
+            <a class="post-link" href="watched/{{id}}"><span class="post-title">{{post_title}}</span></a>
+            <p class="post-body">{{post_body}}</p>
+            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            {{#if watched.date_last_edit}}
+                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <p>No Today I Watched Posts</p>
+    {{/if}}
+</div>
+
+<hr>
+
+
+<div id="home-page">
+    <h1>Today I...</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+       been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+       galley of type and scrambled it to make a type specimen book. It
+       has survived not only five centuries, but also the leap into electronic typesetting,
+       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+       sheets containing Lorem Ipsum passages, and more recently with desktop
+       publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a
+       page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+       normal distribution of letters, as opposed to using 'Content
+       here, content here', making it look like readable English. Many desktop publishing packages
+       and web page editors now use Lorem Ipsum as their default model text, and a search for
+       'lorem ipsum' will uncover many web sites still in their infancy.
+       Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+       (injected humour and the like).</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+       Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+       mus.</p>
+    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+       quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+       rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+    <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+       elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+       consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+       tellus.</p>
+    <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+       ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+       sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+       Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+       Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+       mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales,
+       augue velit cursus nunc,</p>
+    <p>The European languages are members of the same family. Their separate existence is a myth.
+       For science, music, sport, etc, Europe uses the same vocabulary.</p>
+    <p>The languages only differ in their grammar, their pronunciation and their most common words.
+       Everyone realizes why a new common language would be desirable: one could refuse to pay
+       expensive translators.</p>
+    <p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+       words. If several languages coalesce, the grammar of the resulting language is more simple
+       and regular than that of the individual languages.</p>
+    <p>The new common language will be more simple and regular than the existing European languages.
+       It will be as simple as Occidental; in fact, it will be Occidental.</p>
+    <p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend
+       of mine told me what Occidental is. The European languages are members of the same family.
+       Their separate existence is a myth. For science, music, sport, etc, Europe uses the same
+       vocabulary. The languages only differ in their grammar, their pronunciation and their most
+       common words. Everyone realizes why a new common language would be desirable: one could
+       refuse to pay expensive translators. To</p>
+</div>
+

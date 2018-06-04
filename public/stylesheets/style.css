@@ -1,4 +1,20 @@
 
+/*
+ #437C90  queen blue
+ #F2010C  Ku Crimosn
+ #2b2D42  Gunmetal
+ #DAA520  Goldenrod
+ #5F5449  Umber
+
+
+ BDD4E7 pale aqua
+780116 burgundy
+001427 rich black
+F2D91F deep lemon
+ */
+
+
+
 html {
     width: 100%;
 }
@@ -15,7 +31,7 @@ body {
 
 #body {
     margin:           0 auto;
-    background-color: black;
+    background-color: transparent;
     height:           100%;
 }
 * {
@@ -109,8 +125,8 @@ div {
     outline: none;
 }
 #sidebar-toggle-button:hover {
-    border-left: 1px solid #437C90;
-    border-top:  1pt solid #437C90;
+    border-left: 1px solid #5FBFF9;
+    border-top:  1pt solid #5FBFF9;
 }
 #sidebar-div {
     color:            #F2010C;
@@ -140,14 +156,17 @@ div {
     overflow: hidden;
     padding: 0;
     margin: 0;
+    background-color: transparent;
 }
 #content-left {
     bottom:        0;
     font-size:     large;
     padding-top:   2em;
     margin-left:   1em;
+    /*margin-left: auto;*/
     padding-right: 2em;
     width:         auto;
+    background-color: transparent;
 }
 #content-right {
     width: 100%;
@@ -155,13 +174,24 @@ div {
     margin: 0;
 
 }
-#content-right-img {
+#content-right-img{
     overflow: hidden;
     height: 100%;
     position: fixed;
     margin: 0 auto;
     object-fit: scale-down;
 }
+
+
+#content-left-img {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    margin: 0 auto;
+    object-fit: scale-down;
+    z-index: -1;
+}
+
 footer {
     bottom:     0;
     margin-top: auto;
@@ -214,12 +244,21 @@ footer {
         position:   relative;
         display:    block;
     }
+    #content-left-img {
+        width: 100%;
+        align-self: flex-end;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        z-index: -1;
+    }
     #content-right {
         padding: 0;
     }
 }                         /* 7 content-right-img, content-right */
 @media all and (min-width: 992px)  {
-    #content-right-img {
+    #content-right-img, #content-left-img {
         width:      80%;
         object-fit: cover;
     }
@@ -229,6 +268,9 @@ footer {
         height: 225px;
     }
     #content-right-img {
+        object-fit: cover;
+    }
+    #content-left-img {
         object-fit: cover;
     }
 } /* 6 content-right, content-right-image */
@@ -272,7 +314,7 @@ footer {
     color:            white;
 }
 .dark:focus {
-    color:            #437C90;
+    color:            #5FBFF9;
     background-color: black;
     outline:          none;
 }
@@ -309,7 +351,7 @@ footer {
 }
 .dropdown-menu .dropdown-item.opt:hover {
     transition:       0.4s;
-    background-color: #F2010C;
+    background-color: #D10A14;
     color:            white;
 }
 .dropdown-menu.show {
@@ -353,13 +395,13 @@ footer {
 }
 #submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover, #submit-x:hover {
     transition:       0.4s;
-    background-color: #F2010C;
+    background-color: #D10A14;
     border:           1px solid white;
     color:            white;
 }
 #submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus, #submit-x:focus {
     background-color: darkred;
-    border:           1px solid #F2010C;
+    border:           1px solid #D10A14;
     color:            white;
 }
 /*---------------END FORM BUTTONS--------------------*/
@@ -416,39 +458,105 @@ input[type='file'] {
 /*--------------- END FORM: WATCHED -----------------*/
 
 .post-container {
-    border-top: 3pt ridge #38423B;
-    margin: 4% 6% 4% 6%;
+    border-bottom: 3pt ridge #38423B;
+    margin-top: 2em;
+    padding-bottom: 2em;
 }
 
 .post-title {
-    margin-top: 4%;
-    margin-bottom: 2%;
+    margin-bottom: 4em;
     font-weight: 800;
+    color: #F2D91F;
+    text-decoration: underline;
+}
+
+.post-solo-title {
+    font-weight:   800;
+    color:         #D10A14;
+    margin-bottom: 1em;
+    font-family:   "TR Eklektic", cursive; /* Karton, Annodomini, Scrawl of the Chief, TR Electric,  */
+    text-align:    center;
+    font-size:     34pt;
+    border: 3pt double white;
+    width: 80%;
+    margin-left: 1em;
+    padding: .75em;
+    align-items: center;
+
+    /*background: url('../images/flower_light_burst.jpg') no-repeat center;*/
 }
 
 hr {
-    color: white;
-    background-color: goldenrod;
-    margin-bottom: 7%;
+    background-color: white;/*#5F5449;#0B2027;*/
+    /*margin-bottom: 7%;*/
 }
 
 sub {
-    color: #F2010C;
+    color: #D10A14;
 }
 
 .post-body {
-    color: #437C90;
+    color: #3D757C;/*#437c90;#5FBFF9;*/
+    margin-top: 1em;
  }
+.post-solo-body {
+    color: #5FBFF9;
+    margin: 1.5em;
+}
 
 .post-link {
-    color: #F2010C;
-    font-size: xx-large;
+    color: #F2D91F;
+    font-size: x-large;
+    text-decoration: underline;
+
+}
+
+.post-link:hover, .post-link:focus,
+.post-title:hover, .post-title:focus {
+    color: #2B2D42;
 }
 
 ul {
     list-style: none;
 }
 
-.heard-post-div, .learned-post-div, .thought-post-div, .watched-post-div {
-    border-top: 3pt ridge #38423B;
+.section-title {
+    font-family:   "La Belle Aurore", cursive;
+    color:         #D10A14;
+    padding-bottom: 1em;
+    font-size: 36pt;
+
 }
+
+.post-publication {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 10pt;
+    color: #780116;/*#5F5449;/*darkgrey;*/
+}
+
+.inner-title {
+    border: 3pt double #2B2D42;
+}
+
+.btn.btn-dark.btn-outline-dark {
+    background-color: #5FBFF9 /*#5FBFF9*/;
+    border-color: #000;
+    color: black;
+}
+
+.btn.btn-dark.btn-outline-dark:hover,
+.btn.btn-dark.btn-outline-dark:focus {
+    border-color: #5FBFF9;
+    background-color: black;
+    color: #5FBFF9;
+    transition: .4s;
+}
+
+.crud.btn-group {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+
+

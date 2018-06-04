@@ -1,0 +1,23 @@
+
+
+<div id="solo-heard-post">
+    {{#if post}}
+        <h2 class="post-solo-title">{{post.post_title}}</h2>
+        <br>
+        <p class="post-solo-body">{{post.post_body}}</p>
+        <br>
+        <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        <div class="text-center">
+            <form class="heard-crud" action="/edit/heard/{{post.id}}" method="get">
+                <div class="crud btn-group" role="group">
+                    <button type=submit id=h-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
+                    <button type=submit id=h-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
+                </div>
+            </form>
+            <!--<button type="button" class="btn btn-outline-dark btn-dark" id="{{post._id}}"><a href="/edit/heard">UPDATE</a></button>-->
+        </div>
+        <br>
+    {{else}}
+        <p>No Post found for ID</p>
+    {{/if}}
+</div>

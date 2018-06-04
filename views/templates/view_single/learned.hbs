@@ -1,0 +1,23 @@
+
+
+<div id="solo-learned-post">
+    {{#if post}}
+        <h2 class="post-solo-title">{{post.post_title}}</h2>
+        <hr>
+        <p class="post-solo-body">{{post.post_body}}</p>
+        <hr>
+        <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        <div class="text-center">
+            <form class="learned-crud" action="/crud/learned" method="POST">
+                <div class="crud btn-group" role="group">
+                    <input type="text" id="single_learned_update_body_field"
+                    <button type=submit id=l-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
+                    <button type=submit id=l-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
+                </div>
+            </form>
+        </div>
+        <br>
+    {{else}}
+        <p>No Post found for ID.</p>
+    {{/if}}
+</div>

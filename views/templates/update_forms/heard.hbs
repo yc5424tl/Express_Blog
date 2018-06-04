@@ -1,0 +1,45 @@
+
+<div>
+    <form action="/edit/heard/{{post._id}}" method="post">
+        <input type="hidden" placeholder="{{post._id}}" id="{{post._id}}">
+        <div class="form-group">
+            <label for="heard_title_input">Title</label>
+            <input class="form-control" type="text" value="{{post.post_title}}" id="heard_title_input">
+        </div>
+        <div class="form-group">
+            <label for="heard_body_input">Comment</label>
+            <textarea class="form-control" rows=8 id="heard_body_input">{{post.post_body}}</textarea>
+        </div>
+        <div class="form-group">
+            {{#if post.post_artist}}
+                <label for="heard_artist_input">Artist</label>
+                <input class="form-control" type="text" id="heard_artist_input" value="{{post.post_artist}}">
+            {{/if}}
+        </div>
+        <div class="form-group">
+            {{#if post.post_album}}
+                <label for="heard_album_input">Album</label>
+                <input class="form-control" type="text" id="heard_album_input" value="{{post.post_album}}">
+            {{/if}}
+        </div>
+        <div class="form-group">
+            {{#if post.post_track}}
+                <label for="heard_track_input">Track</label>
+                <input class="form-control" type="text" id="heard_track_input" value="{{post.post_track}}">
+            {{/if}}
+        </div>
+        <div class="form-group">
+            {{#if post.post_url_link}}
+                <label for="heard_link_input">Link</label>
+                <input class="form-control" type="text" id="heard_link_input" value="{{post.post_url_link}}">
+            {{/if}}
+        </div>
+        <div class="form-group">
+            {{#if post.user_rating}}
+                <label for="heard_rating">Rating</label>
+                <input class="form-control" type="text" id="heard_rating" value="{{post.user_rating}}">
+            {{/if}}
+        </div>
+        <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>
+    </form>
+</div>
