@@ -1,43 +1,43 @@
 
 <div>
-    <form action="/edit/heard/{{post._id}}" method="post">
-        <input type="hidden" placeholder="{{post._id}}" id="{{post._id}}">
+    <form action="/edit/heard/{{post.id}}" method="post">
+        <!--<input type="hidden" placeholder="{post.id}}" id="{post.id}}">-->
         <div class="form-group">
-            <label for="heard_title_input">Title</label>
-            <input class="form-control" type="text" value="{{post.post_title}}" id="heard_title_input">
+            <label for="heard-title-input">Title</label>
+            <input name="postTitle" class="form-control" type="text" value="{{post.post_title}}" id="heard-title-input">
         </div>
         <div class="form-group">
-            <label for="heard_body_input">Comment</label>
-            <textarea class="form-control" rows=8 id="heard_body_input">{{post.post_body}}</textarea>
+            <label for="heard-body-input">Comment</label>
+            <textarea name="postBody" class="form-control" rows="8" id="heard-body-input">{{post.post_body}}</textarea>
         </div>
         <div class="form-group">
             {{#if post.post_artist}}
-                <label for="heard_artist_input">Artist</label>
-                <input class="form-control" type="text" id="heard_artist_input" value="{{post.post_artist}}">
+                <label for="heard-artist-input">Artist</label>
+                <input name="postArtist" class="form-control" type="text" id="heard-artist-input" value="{{post.post_artist}}">
             {{/if}}
         </div>
         <div class="form-group">
             {{#if post.post_album}}
-                <label for="heard_album_input">Album</label>
-                <input class="form-control" type="text" id="heard_album_input" value="{{post.post_album}}">
+                <label for="heard-album-input">Album</label>
+                <input name="postAlbum" class="form-control" type="text" id="heard-album-input" value="{{post.post_album}}">
             {{/if}}
         </div>
         <div class="form-group">
             {{#if post.post_track}}
-                <label for="heard_track_input">Track</label>
-                <input class="form-control" type="text" id="heard_track_input" value="{{post.post_track}}">
+                <label for="heard-track-input">Track</label>
+                <input name="postTrack" class="form-control" type="text" id="heard-track-input" value="{{post.post_track}}">
             {{/if}}
         </div>
         <div class="form-group">
             {{#if post.post_url_link}}
-                <label for="heard_link_input">Link</label>
-                <input class="form-control" type="text" id="heard_link_input" value="{{post.post_url_link}}">
+                <label for="heard-link-input">Link</label>
+                <input name="postLink" class="form-control" type="text" id="heard-link-input" value="{{post.post_url_link}}">
             {{/if}}
         </div>
         <div class="form-group">
             {{#if post.user_rating}}
-                <label for="heard_rating">Rating</label>
-                <input class="form-control" type="text" id="heard_rating" value="{{post.user_rating}}">
+                <label for="heard-rating">Rating</label>
+                <input name="postRating" class="form-control" type="text" id="heard-rating" value="{{post.user_rating}}">
             {{/if}}
         </div>
         <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>

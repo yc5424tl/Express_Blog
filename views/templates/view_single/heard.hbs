@@ -3,18 +3,26 @@
 <div id="solo-heard-post">
     {{#if post}}
         <h2 class="post-solo-title">{{post.post_title}}</h2>
-        <br>
+        <hr>
+        <ul>
+            {{#if post.post_artist}}  <li>Artist: {{post.post_artist}}   </li>{{/if}}
+            {{#if post.post_album}}   <li>Album: {{post.post_album}}     </li>{{/if}}
+            {{#if post.post_track}}   <li>Track: {{post.post_track}}     </li>{{/if}}
+            {{#if post.user_rating}}  <li>Rating: {{post.user_rating}}/10</li>{{/if}}
+            {{#if post.post_url_link}}<li><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
+        </ul>
         <p class="post-solo-body">{{post.post_body}}</p>
-        <br>
+        <hr>
         <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
         <div class="text-center">
             <form class="heard-crud" action="/edit/heard/{{post.id}}" method="get">
-                <div class="crud btn-group" role="group">
+                <div class="form-group crud btn-group" role="group">
                     <button type=submit id=h-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
                     <button type=submit id=h-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
                 </div>
             </form>
-            <!--<button type="button" class="btn btn-outline-dark btn-dark" id="{{post._id}}"><a href="/edit/heard">UPDATE</a></button>-->
+            <!--<button type="button" class="btn btn-outline-dark btn-dark" id="{post._id}}"><a href="/edit/heard">UPDATE</a></button>-->
         </div>
         <br>
     {{else}}

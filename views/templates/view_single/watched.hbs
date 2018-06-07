@@ -6,10 +6,17 @@
         <h2 class="post-solo-title">{{post.post_title}}</h2>
         <hr>
         <p class="post-solo-body">{{post.post_body}}</p>
+        {{#if post.post_url_link }}
+            <div class="watched-1-2-split"><a href="{{post.post_url_link}}">{{post.post_url_link}}</a></div>
+        {{/if}}
+        {{#if post.post_file_uri }}
+            <div class="watched-1-2-split"><a href="{{post.post_file_uri}}">{{post.post_file_uri}}</a></div>
+        {{/if}}
         <hr>
         <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
         <div class="text-center">
-            <form class="watched-crud" action="/crud/watched" method="get">
+            <form class="watched-crud" action="/edit/watched/{{post.id}}" method="get">
                 <div class="crud btn-group" role="group">
                     <button type=submit id=w-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
                     <button type=submit id=w-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>

@@ -7,10 +7,10 @@
         <p class="post-solo-body">{{post.post_body}}</p>
         <hr>
         <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
         <div class="text-center">
-            <form class="learned-crud" action="/crud/learned" method="POST">
+            <form class="learned-crud" action="/edit/learned/{{post.id}}" method="get">
                 <div class="crud btn-group" role="group">
-                    <input type="text" id="single_learned_update_body_field"
                     <button type=submit id=l-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
                     <button type=submit id=l-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
                 </div>

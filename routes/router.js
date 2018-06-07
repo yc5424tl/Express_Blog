@@ -1,4 +1,3 @@
-'use strict';
 
 const
     indexRouter = require('./index.js'),

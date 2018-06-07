@@ -1,26 +1,13 @@
 
-/*
- #437C90  queen blue
- #F2010C  Ku Crimosn
- #2b2D42  Gunmetal
- #DAA520  Goldenrod
- #5F5449  Umber
-
-
- BDD4E7 pale aqua
-780116 burgundy
-001427 rich black
-F2D91F deep lemon
- */
-
-
 
 html {
     width: 100%;
 }
 
+
 body {
-    font-family:      'Reem Kufi', sans-serif;
+    /*font-family:      'Reem Kufi', sans-serif;*/
+    font-family: Trixie-Plain, cursive;
     font-size:        large;
     width:            100%;
     height:           100%;
@@ -29,32 +16,45 @@ body {
     color:            white;
 }
 
+
 #body {
     margin:           0 auto;
     background-color: transparent;
     height:           100%;
 }
+
+
 * {
     padding:    0;
     margin:     0;
     box-sizing: border-box;
 }
+
+
 h1 {
     font-family:   "La Belle Aurore", cursive;
-    color:         #F2010C;
+    color:         #EF0000;
     margin-bottom: 1em;
 }
+
+
 .equal-width {
     flex: 1;
 }
+
+
 .col {
     margin:  0;
     padding: 0;
 }
+
+
 div {
     padding: 0;
     margin:  0;
 }
+
+
 .row {
     width:   inherit;
     margin:  0;
@@ -75,41 +75,57 @@ div {
     align-self:       center;
     align-items:      center;
 }
+
+
 /* Navigation List Items */
 .nav-item.list-group-item > a {
-    color:               #F2010C;
+    color:               #EF0000;
     transition-duration: 0.4s;
     border-radius:       12px;
     align-content:       center;
     align-items:         center;
     margin:              0;
     padding:             0;
-}                    /* Navigation List Links */
+}
+
+
+/* Navigation List Links */
 .nav-item.list-group-item > a:hover,
 .nav-item.list-group-item > a:focus {
     background-color: white;
     color:            black;
     padding:          10px 21px 5px 10px;
-}              /* Navigation List Links Hover/Focus */
+}
+
+
+/* Navigation List Links Hover/Focus */
 .navbar.navbar-dark {
     background: transparent;
     display:    inline;
     margin-top: 1em;
-}                              /* Navbar */
+}
+
+/* Navbar */
 @media all and (max-width: 567px) {
     #nav-login-form {
         display: none;
     }
 }
+
+
 #username-field, #password-field, #submit-btn {
     display: none;
     margin:  0 0 0 5px;
 }
+
+
 .form-group.nav.navbar-nav.float-lg-right {
     align-content: space-between;
 }
+
+
 .navbar-toggler-icon {
-    color: #5FBFF9;
+    color: #2095AD;
 }
 /******************  END NAV  ************************/
 
@@ -121,13 +137,19 @@ div {
     font-size: 1em;
     border:    none;
 }
+
+
 #sidebar-toggle-button:focus {
     outline: none;
 }
+
+
 #sidebar-toggle-button:hover {
-    border-left: 1px solid #5FBFF9;
-    border-top:  1pt solid #5FBFF9;
+    border-left: 1px solid #2095AD;
+    border-top:  1pt solid #2095AD;
 }
+
+
 #sidebar-div {
     color:            #F2010C;
     background-color: black;
@@ -138,10 +160,14 @@ div {
     border-right:     1pt solid white;
     max-width:        435px;
 }
+
+
 #sidebar-div p {
     margin:    15px;
     font-size: 0.917em;
 }
+
+
 #sidebar-div > ul {
     list-style: none;
 }
@@ -158,22 +184,27 @@ div {
     margin: 0;
     background-color: transparent;
 }
+
+
 #content-left {
     bottom:        0;
     font-size:     large;
     padding-top:   2em;
     margin-left:   1em;
-    /*margin-left: auto;*/
     padding-right: 2em;
     width:         auto;
     background-color: transparent;
 }
+
+
 #content-right {
     width: 100%;
     bottom: 0;
     margin: 0;
 
 }
+
+
 #content-right-img{
     overflow: hidden;
     height: 100%;
@@ -192,6 +223,7 @@ div {
     z-index: -1;
 }
 
+
 footer {
     bottom:     0;
     margin-top: auto;
@@ -205,7 +237,9 @@ footer {
     #content {
         flex-flow: column-reverse nowrap;
     }
-}                        /* 1 content */
+}
+
+
 @media all and (max-width: 991px) {
     #content-right, #content-left {
         display:       block;
@@ -213,12 +247,16 @@ footer {
         width:         100%;
         margin-bottom: 2em;
     }
-}                        /* 8 content-right, content-left */
+}
+
+
 @media all and (max-width: 991px) {
     .equal-width {
         flex: 0 auto;
     }
-}                        /* 9 equal-width */
+}
+
+
 @media all and (min-width: 992px) {
     #content-left {
         margin-left: 4em;
@@ -229,12 +267,16 @@ footer {
         max-width: 60%;
         width:     60%;
     }
-}                       /* 2 content-left, content-right */
+}
+
+
 @media all and (min-width:768px) and (max-width:991px) {
     #content-left {
         padding-top: 0;
     }
-}   /* 5 content-left */
+}
+
+
 @media all and (max-width:991px) {
     #content-right-img {
         width:      100%;
@@ -256,13 +298,17 @@ footer {
     #content-right {
         padding: 0;
     }
-}                         /* 7 content-right-img, content-right */
+}
+
+
 @media all and (min-width: 992px)  {
     #content-right-img, #content-left-img {
         width:      80%;
         object-fit: cover;
     }
-}                       /* 4 content-right-img */
+}
+
+
 @media all and (min-width:540px) and (max-width: 1199px) {
     #content-right {
         height: 225px;
@@ -273,7 +319,7 @@ footer {
     #content-left-img {
         object-fit: cover;
     }
-} /* 6 content-right, content-right-image */
+}
 /****************** END BREAKPOINTS  *****************/
 
 
@@ -282,6 +328,8 @@ footer {
 .footer-block {
     padding:10px;
 }
+
+
 #footer-div {
     height:     100%;
     bottom:     0;
@@ -291,6 +339,8 @@ footer {
     margin:     0 0 0 0;
     text-align: center;
 }
+
+
 .footer {
     flex-shrink: 0;
     margin-top:  auto;
@@ -307,23 +357,31 @@ footer {
 
 /******************** NEW POST ***********************/
 #new-post {
-    display: inherit; /* orig: none */
+    display: inherit;
 }
+
+
 .dark {
     background-color: black;
     color:            white;
 }
+
+
 .dark:focus {
-    color:            #5FBFF9;
+    color:            #2095AD;
     background-color: black;
     outline:          none;
 }
+
+
 .input-group-text {
     background-color: black;
     color:            white;
 }
+
+
 #form-header {
-    display: inherit; /* orig: none */
+    display: inherit;
 }
 /******************* END NEW POST ********************/
 
@@ -335,30 +393,42 @@ footer {
 #select-post-dropdown-x{
     padding: 0;
 }
+
+
 #post-dropdown {
     padding:          0;
     background-color: black;
 }
+
+
 .dropdown-menu {
     width:   100%;
     padding: 0;
     outline: 1pt dashed white;
 }
+
+
 .dropdown-menu .dropdown-item.opt {
     text-align:       center;
     background-color: black;
     color:            white;
 }
+
+
 .dropdown-menu .dropdown-item.opt:hover {
     transition:       0.4s;
-    background-color: #D10A14;
+    background-color: #EF0000;
     color:            white;
 }
+
+
 .dropdown-menu.show {
     width:     100%;
     max-width: 100%;
     min-width: 100%;
 }
+
+
 #post-title-h, #post-title-l, #post-title-t, #post-title-w, #post-title-x {
     font-weight:  bold;
     font-variant: small-caps;
@@ -370,13 +440,17 @@ footer {
 
 /*-------------- FORM: HEARD ------------------------*/
 #form-type-h, #form-type-l, #form-type-t, #form-type-w {
-    display: none; /* orig: none */
+    display: none;
 }
+
+
 #dropdown-btn-l, #dropdown-btn-h, #dropdown-btn-t, #dropdown-btn-w, #dropdown-btn-x {
     width:            100%;
     background-color: black;
     color:            white;
 }
+
+
 #rating-div {
     border-right:  1pt inset white;
     border-radius: 4pt;
@@ -393,15 +467,19 @@ footer {
     border:           1px solid white;
     color:            white;
 }
+
+
 #submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover, #submit-x:hover {
     transition:       0.4s;
-    background-color: #D10A14;
+    background-color: #EF0000;
     border:           1px solid white;
     color:            white;
 }
+
+
 #submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus, #submit-x:focus {
     background-color: darkred;
-    border:           1px solid #D10A14;
+    border:           1px solid #EF0000;
     color:            white;
 }
 /*---------------END FORM BUTTONS--------------------*/
@@ -413,10 +491,14 @@ footer {
     display:     flex;
     align-items: center;
 }
+
+
 .col-4.watched-col {
     margin-left:  10px;
     margin-right: -10px;
 }
+
+
 #file-input-w {
     color:            transparent;
     padding:          0;
@@ -424,38 +506,53 @@ footer {
     width:            100%;
     margin:           0;
 }
+
+
 .custom-file-upload {
     border:  1px solid white;
     display: inline;
     cursor:  pointer;
     padding: 6px 12px;
     margin:  0;
-
 }
+
+
 #file-prepend-text-w {
     padding-left:  14px;
     padding-right: 14px;
 }
-input[type='file'] {
+
+
+/*input[type='file'] {*/
+#file-input-w {
     color:            transparent;
     background-color: transparent;
     display:          none; /* orig: none */
 }
+
+
 #file-input-label-w {
     border-bottom-right-radius: 3pt;
     border-top-right-radius:    3pt;
 }
+
+
 #form-type-w, #file-input-outer-div-w, #url-input-outer-div-w{
     display: none; /* orig: none */
 }
+
+
 #file-input-outer-div-w, #url-input-inner-div-w {
     padding-right: 0;
 }
+
+
 #submit-div-w {
     padding-left:  0;
     padding-right: 0;
 }
 /*--------------- END FORM: WATCHED -----------------*/
+
 
 .post-container {
     border-bottom: 3pt ridge #38423B;
@@ -463,52 +560,73 @@ input[type='file'] {
     padding-bottom: 2em;
 }
 
+
 .post-title {
     margin-bottom: 4em;
     font-weight: 800;
-    color: #F2D91F;
+    color: #EF0000;
     text-decoration: underline;
 }
 
+
 .post-solo-title {
-    font-weight:   800;
-    color:         #D10A14;
+    font-weight:   900;
+    color:         #EF0000;
     margin-bottom: 1em;
     font-family:   "TR Eklektic", cursive; /* Karton, Annodomini, Scrawl of the Chief, TR Electric,  */
     text-align:    center;
-    font-size:     34pt;
-    border: 3pt double white;
+    font-size:     40pt;
+    /*border: 3pt double #437C90/*#326066*/;
     width: 80%;
     margin-left: 1em;
-    padding: .75em;
+    padding: .45em;
     align-items: center;
 
     /*background: url('../images/flower_light_burst.jpg') no-repeat center;*/
 }
 
 hr {
-    background-color: white;/*#5F5449;#0B2027;*/
+    background-color: #2e2D22;/*#326066;#5F5449;#0B2027;*/
     /*margin-bottom: 7%;*/
 }
 
 sub {
-    color: #D10A14;
+    color: #EF0000;
 }
 
 .post-body {
-    color: #3D757C;/*#437c90;#5FBFF9;*/
+    color: #FFF;/*#437c90;#5FBFF9;*/
     margin-top: 1em;
  }
+
+
 .post-solo-body {
-    color: #5FBFF9;
-    margin: 1.5em;
+    color: #FFF;
+    margin: 1em 1em 2.5em 1em;
+    font-size: 13pt;
+
 }
 
+
+.post-solo-body::first-line {
+    color: #437C90;
+}
+
+
+.post-solo-body::first-letter {
+    color: #EF0000;
+    font-family: "TR Eklektic", cursive;
+    font-size: 40pt;
+    font-weight: 800;
+}
+
+
 .post-link {
-    color: #F2D91F;
+    color: #EF0000;
     font-size: x-large;
     text-decoration: underline;
-
+    text-align: justify;
+    width: 100%;
 }
 
 .post-link:hover, .post-link:focus,
@@ -516,42 +634,46 @@ sub {
     color: #2B2D42;
 }
 
+
 ul {
     list-style: none;
 }
 
 .section-title {
     font-family:   "La Belle Aurore", cursive;
-    color:         #D10A14;
+    color:          #EF0000;
     padding-bottom: 1em;
-    font-size: 36pt;
-
+    font-size:      36pt;
 }
 
 .post-publication {
     text-align: center;
     margin-top: 2em;
     font-size: 10pt;
-    color: #780116;/*#5F5449;/*darkgrey;*/
+    color: #2e2D22;
 }
+
 
 .inner-title {
-    border: 3pt double #2B2D42;
+    border: 3pt double #2b2D42;
 }
 
+
 .btn.btn-dark.btn-outline-dark {
-    background-color: #5FBFF9 /*#5FBFF9*/;
+    background-color: #437C90 /*#5FBFF9*/;
     border-color: #000;
-    color: black;
+    color: white;
 }
+
 
 .btn.btn-dark.btn-outline-dark:hover,
 .btn.btn-dark.btn-outline-dark:focus {
-    border-color: #5FBFF9;
-    background-color: black;
-    color: #5FBFF9;
+    border-color: #437C90;
+    background-color: #000;
+    color: #437C90;
     transition: .4s;
 }
+
 
 .crud.btn-group {
     margin-top: 1em;
@@ -559,4 +681,34 @@ ul {
 }
 
 
+.update-btn {
+    display: block;
+    margin:  auto auto 1.5em;
+}
+
+
+#watched-file-input {
+    border: 1.25pt solid white;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="url"], input[type="file"] {
+    background: #000;
+    color: #EF0000;
+    font-size: 14pt;
+}
+
+#watched-body-input, #heard-body-input, #learned-body-input, #thought-body-input {
+    background: black;
+    color: #2095AD;
+    font-size: 12pt;
+    text-align: justify;
+    padding: 1.5em 2em 1em 2em;
+    resize: both;
+    width: 100%;
+}
+
+label {
+    margin:0;
+}
 

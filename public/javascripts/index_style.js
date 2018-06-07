@@ -21,7 +21,7 @@ $(document).ready(function () {
         let effect = 'slide';
         let duration = 'slow';
         $('#sidebar-div').toggle(effect, duration);
-        setFileInputSize()
+        setFileInputSize();
     });
 
 
@@ -54,9 +54,12 @@ $(document).ready(function () {
 
 
     $(window).on('resize', function () {
-        setFileInputSize()
+        setFileInputSize();
         });
 });
+
+
+
 
 function setFileInputSize() {
 

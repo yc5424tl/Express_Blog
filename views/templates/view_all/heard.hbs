@@ -6,10 +6,17 @@
             {{#each posts}}
                 <li class="heard-post-li">
                     <div class="post-container">
-                        <a class="post-link" href="heard/{{this._id}}">{{this.post_title}}</a>
+                        <a class="post-link" href="/heard/{{this._id}}">{{this.post_title}}</a>
+                        <ul>
+                            {{#if post.post_artist}}  <li>Artist: {{post.post_artist}}   </li>{{/if}}
+                            {{#if post.post_album}}   <li>Album: {{post.post_album}}     </li>{{/if}}
+                            {{#if post.post_track}}   <li>Track: {{post.post_track}}     </li>{{/if}}
+                            {{#if post.user_rating}}  <li>Rating: {{post.user_rating}}/10</li>{{/if}}
+                            {{#if post.post_url_link}}<li><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
+                        </ul>
                         <p class="post-preview">{{post_body}}</p>
                         <h6 class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</h6>
-                        {{#if date_last_edit}}<p>Edited: {{this.date_last_edit}}{{/if}}
+                        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
                     </div>
                 </li>
             {{/each}}

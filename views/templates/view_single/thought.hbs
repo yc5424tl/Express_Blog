@@ -9,8 +9,9 @@
         <p class="post-solo-body">{{post.post_body}}</p>
         <hr>
         <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
+        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
         <div class="text-center">
-            <form class="thought-crud" action="/crud/thought" method="get">
+            <form class="thought-crud" action="/edit/thought/{{post.id}}" method="get">
                 <div class="crud btn-group" role="group">
                     <button type=submit id=t-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
                     <button type=submit id=t-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
