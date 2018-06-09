@@ -7,12 +7,12 @@
                 <li class="heard-post-li">
                     <div class="post-container">
                         <a class="post-link" href="/heard/{{this._id}}">{{this.post_title}}</a>
-                        <ul>
-                            {{#if post.post_artist}}  <li>Artist: {{post.post_artist}}   </li>{{/if}}
-                            {{#if post.post_album}}   <li>Album: {{post.post_album}}     </li>{{/if}}
-                            {{#if post.post_track}}   <li>Track: {{post.post_track}}     </li>{{/if}}
-                            {{#if post.user_rating}}  <li>Rating: {{post.user_rating}}/10</li>{{/if}}
-                            {{#if post.post_url_link}}<li><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
+                        <ul class="list-group-flush list-group-dark">
+                            {{#if post_artist}}  <li class="list-inline"><b class="list-cat-header">Artist</b> {{this.post_artist}}   </li>{{/if}}
+                            {{#if post_album}}   <li class="list-inline"><b class="list-cat-header">Album</b> {{this.post_album}}     </li>{{/if}}
+                            {{#if post_track}}   <li class="list-inline"><b class="list-cat-header">Track</b> {{this.post_track}}     </li>{{/if}}
+                            {{#if user_rating}}  <li class="list-inline"><b class="list-cat-header">Rating</b> {{this.user_rating}}/10</li>{{/if}}
+                            {{#if post_url_link}}<li class="list-inline"><b class="list-cat-header">Source </b><a href="{{this.post_url_link}}">Link</a></li>{{/if}}
                         </ul>
                         <p class="post-preview">{{post_body}}</p>
                         <h6 class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</h6>

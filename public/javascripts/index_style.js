@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 
     $('#url-check-w').change(function () {
-        $('#url-input-div-w').toggle();
+        $('#url-input-outer-div-w').toggle();
     });
 
 
@@ -67,7 +67,7 @@ function setFileInputSize() {
     let inputInnerDivWidth;
     let newWidth;
 
-    prependWidth = ($('#file-prepend').width());
+    prependWidth = ($('#file-prepend-div-w').width());
     inputInnerDivWidth = ($('#file-input-inner-div-w').width());
     newWidth = (inputInnerDivWidth - prependWidth - 25);
 

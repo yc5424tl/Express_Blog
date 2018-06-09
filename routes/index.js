@@ -69,17 +69,12 @@ router.get('/', function(req, res, next) {
 
 
 
-//
-//
-// /* GET new post page */
-// router.get('/wrote', function(req, res) {
-//     WatchedData.find(function (err, watched) {
-//         res.render('../views/templates/view_wrote.hbs', {
-//             title: 'Today I Wrote',
-//             posts: watched
-//         });
-//     });
-// });
+
+
+/* GET new post page */
+router.get('/wrote', function(req, res) {
+    res.render('../views/templates/view_wrote.hbs');
+});
 
 
 
@@ -224,8 +219,8 @@ router.post('/new_heard', function(req, res, next) {
             post.post_track = req.body.heardTrack;
         }
 
-        if(req.body.heardUrl) {
-            post.post_url_link = req.body.heardUrl;
+        if(req.body.heardLink) {
+            post.post_url_link = req.body.heardLink;
         }
 
         if(req.body.heardRating) {

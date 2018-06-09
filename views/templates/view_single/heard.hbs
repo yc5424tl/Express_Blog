@@ -3,14 +3,15 @@
 <div id="solo-heard-post">
     {{#if post}}
         <h2 class="post-solo-title">{{post.post_title}}</h2>
-        <hr>
-        <ul>
-            {{#if post.post_artist}}  <li>Artist: {{post.post_artist}}   </li>{{/if}}
-            {{#if post.post_album}}   <li>Album: {{post.post_album}}     </li>{{/if}}
-            {{#if post.post_track}}   <li>Track: {{post.post_track}}     </li>{{/if}}
-            {{#if post.user_rating}}  <li>Rating: {{post.user_rating}}/10</li>{{/if}}
-            {{#if post.post_url_link}}<li><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
+
+        <ul class="list-group-flush list-group-dark">
+            {{#if post.post_artist}}  <li class="list-inline"><b class="list-cat-header">Artist </b>         {{post.post_artist}}            </li>{{/if}}
+            {{#if post.post_album}}   <li class="list-inline"><b class="list-cat-header">Album  </b>         {{post.post_album}}             </li>{{/if}}
+            {{#if post.post_track}}   <li class="list-inline"><b class="list-cat-header">Track  </b>         {{post.post_track}}             </li>{{/if}}
+            {{#if post.user_rating}}  <li class="list-inline"><b class="list-cat-header">Rating </b>         {{post.user_rating}}/10         </li>{{/if}}
+            {{#if post.post_url_link}}<li class="list-inline"><b class="list-cat-header">Source </b><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
         </ul>
+    <hr class="hr-2">
         <p class="post-solo-body">{{post.post_body}}</p>
         <hr>
         <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>

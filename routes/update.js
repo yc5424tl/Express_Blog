@@ -1,6 +1,5 @@
 
 
-
 const learnedTable = require('../models/learnedModel.js');
 const heardTable   = require('../models/heardModel.js');
 const thoughtTable = require('../models/thoughtModel.js');
@@ -9,9 +8,6 @@ const watchedTable = require('../models/watchedModel.js');
 
 let express = require('express');
 let router = express.Router();
-
-
-
 
 
 router.get('/heard/:_id', (req, res, next) => {
@@ -97,6 +93,7 @@ router.get('/learned/:_id', (req, res, next) => {
         });
     });
 
+
 router.post('/learned/:_id', (req, res, next) => {
 
 
@@ -154,7 +151,6 @@ router.post('/learned/:_id', (req, res, next) => {
 
 
 
-
 router.get('/thought/:_id', (req, res, next) => {
     thoughtTable.findById(req.params._id)
         .then((post) => {
@@ -169,7 +165,6 @@ router.get('/thought/:_id', (req, res, next) => {
             next(err);
         });
 });
-
 
 
 router.post('/thought/:_id', (req, res, next) => {
@@ -252,7 +247,6 @@ router.post('/watched/:_id', (req, res, next) => {
             }
         });
 });
-
 
 
 module.exports = router;

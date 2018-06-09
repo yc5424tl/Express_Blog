@@ -518,8 +518,8 @@ footer {
 
 
 #file-prepend-text-w {
-    padding-left:  14px;
-    padding-right: 14px;
+    padding-left:  12px;
+    padding-right: 12px;
 }
 
 
@@ -542,7 +542,7 @@ footer {
 }
 
 
-#file-input-outer-div-w, #url-input-inner-div-w {
+#file-input-outer-div-w, #url-input-outer-div-w {
     padding-right: 0;
 }
 
@@ -712,3 +712,26 @@ label {
     margin:0;
 }
 
+.list-inline {
+    display: inline-flex;
+    font-size: 10pt;
+    /*color: #01295F;*/
+    /*color: #FF9F1C;*/
+    color: #BA9C3B;
+}
+
+.list-cat-header {
+    font-weight: 900;
+    color: #26413C;
+    border: 1pt solid #2b2D42;
+    border-collapse:  collapse;
+}
+
+.list-inline a {
+    color: #BA9C3B;
+
+}
+
+.list-group-flush.list-group-dark {
+    text-align: center;
+}
