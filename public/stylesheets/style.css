@@ -2,18 +2,23 @@
 
 html {
     width: 100%;
+    /*font-family: 'Josefin Slab', serif;*/
+    /*font-family: 'Playfair Display', serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
 }
 
 
 body {
     /*font-family:      'Reem Kufi', sans-serif;*/
-    font-family: Trixie-Plain, cursive;
+    /*font-family: Trixie-Plain, cursive;*/
+    /*font-family: KaiTi, serif;*/
+    font-family: i, sans-serif;
     font-size:        large;
     width:            100%;
     height:           100%;
     margin:           0;
     background-color: black;
-    color:            white;
+    color:            #fff;
 }
 
 
@@ -33,7 +38,7 @@ body {
 
 h1 {
     font-family:   "La Belle Aurore", cursive;
-    color:         #EF0000;
+    color:         #F40717;
     margin-bottom: 1em;
 }
 
@@ -65,7 +70,7 @@ div {
 
 /*******************  NAV  **************************/
 .nav > .nav-item.list-group-item {
-    color:            red;
+    color:            #F40717;
     font-weight:      900;
     font-size:        20pt;
     font-family:      "La Belle Aurore", cursive;
@@ -79,7 +84,7 @@ div {
 
 /* Navigation List Items */
 .nav-item.list-group-item > a {
-    color:               #EF0000;
+    color:               #F40717;
     transition-duration: 0.4s;
     border-radius:       12px;
     align-content:       center;
@@ -92,7 +97,7 @@ div {
 /* Navigation List Links */
 .nav-item.list-group-item > a:hover,
 .nav-item.list-group-item > a:focus {
-    background-color: white;
+    background-color: #fff;
     color:            black;
     padding:          10px 21px 5px 10px;
 }
@@ -125,7 +130,7 @@ div {
 
 
 .navbar-toggler-icon {
-    color: #2095AD;
+    color: #1986C1;
 }
 /******************  END NAV  ************************/
 
@@ -145,19 +150,19 @@ div {
 
 
 #sidebar-toggle-button:hover {
-    border-left: 1px solid #2095AD;
-    border-top:  1pt solid #2095AD;
+    border-left: 1px solid #1986C1;
+    border-top:  1pt solid #1986C1;
 }
 
 
 #sidebar-div {
-    color:            #F2010C;
+    color:            #F40717;
     background-color: black;
     display:          none;
     margin-top:       15px;
     align-content:    center;
     height:           100%;
-    border-right:     1pt solid white;
+    border-right:     1pt solid #fff;
     max-width:        435px;
 }
 
@@ -363,12 +368,12 @@ footer {
 
 .dark {
     background-color: black;
-    color:            white;
+    color:            #fff;
 }
 
 
 .dark:focus {
-    color:            #2095AD;
+    color:            #1986C1;
     background-color: black;
     outline:          none;
 }
@@ -376,7 +381,7 @@ footer {
 
 .input-group-text {
     background-color: black;
-    color:            white;
+    color:            #fff;
 }
 
 
@@ -404,21 +409,21 @@ footer {
 .dropdown-menu {
     width:   100%;
     padding: 0;
-    outline: 1pt dashed white;
+    outline: 1pt dashed #fff;
 }
 
 
 .dropdown-menu .dropdown-item.opt {
     text-align:       center;
     background-color: black;
-    color:            white;
+    color:            #fff;
 }
 
 
 .dropdown-menu .dropdown-item.opt:hover {
     transition:       0.4s;
-    background-color: #EF0000;
-    color:            white;
+    background-color: #F40717;
+    color:            #fff;
 }
 
 
@@ -447,12 +452,12 @@ footer {
 #dropdown-btn-l, #dropdown-btn-h, #dropdown-btn-t, #dropdown-btn-w, #dropdown-btn-x {
     width:            100%;
     background-color: black;
-    color:            white;
+    color:            #fff;
 }
 
 
 #rating-div {
-    border-right:  1pt inset white;
+    border-right:  1pt inset #fff;
     border-radius: 4pt;
 }
 /*-------------- END FORM: HEARD --------------------*/
@@ -464,23 +469,23 @@ footer {
     display:          block;
     width:            inherit;
     background-color: black;
-    border:           1px solid white;
-    color:            white;
+    border:           1px solid #fff;
+    color:            #fff;
 }
 
 
 #submit-h:hover, #submit-l:hover, #submit-t:hover, #submit-w:hover, #submit-x:hover {
     transition:       0.4s;
-    background-color: #EF0000;
-    border:           1px solid white;
-    color:            white;
+    background-color: #F40717;
+    border:           1px solid #fff;
+    color:            #fff;
 }
 
 
 #submit-h:focus, #submit-l:focus, #submit-t:focus, #submit-w:focus, #submit-x:focus {
     background-color: darkred;
-    border:           1px solid #EF0000;
-    color:            white;
+    border:           1px solid #F40717;
+    color:            #fff;
 }
 /*---------------END FORM BUTTONS--------------------*/
 
@@ -509,7 +514,7 @@ footer {
 
 
 .custom-file-upload {
-    border:  1px solid white;
+    border:  1px solid #fff;
     display: inline;
     cursor:  pointer;
     padding: 6px 12px;
@@ -555,7 +560,7 @@ footer {
 
 
 .post-container {
-    border-bottom: 3pt ridge #38423B;
+    border-bottom: 3pt ridge #5B5555;
     margin-top: 2em;
     padding-bottom: 2em;
 }
@@ -564,15 +569,15 @@ footer {
 .post-title {
     margin-bottom: 4em;
     font-weight: 800;
-    color: #EF0000;
+    color: #F40717;
     text-decoration: underline;
 }
 
 
 .post-solo-title {
     font-weight:   900;
-    color:         #EF0000;
-    margin-bottom: 1em;
+    color:         #F40717;
+    margin-bottom: .25em;
     font-family:   "TR Eklektic", cursive; /* Karton, Annodomini, Scrawl of the Chief, TR Electric,  */
     text-align:    center;
     font-size:     40pt;
@@ -586,22 +591,22 @@ footer {
 }
 
 hr {
-    background-color: #2e2D22;/*#326066;#5F5449;#0B2027;*/
+    background-color: #5B5555;/*#326066;#5F5449;#0B2027;*/
     /*margin-bottom: 7%;*/
 }
 
 sub {
-    color: #EF0000;
+    color: #F40717;
 }
 
 .post-body {
-    color: #FFF;/*#437c90;#5FBFF9;*/
+    color: #fff;/*#437c90;#5FBFF9;*/
     margin-top: 1em;
  }
 
 
 .post-solo-body {
-    color: #FFF;
+    color: #fff;
     margin: 1em 1em 2.5em 1em;
     font-size: 13pt;
 
@@ -609,12 +614,11 @@ sub {
 
 
 .post-solo-body::first-line {
-    color: #437C90;
+    color: #1986C1;
 }
 
-
 .post-solo-body::first-letter {
-    color: #EF0000;
+    color: #F40717;
     font-family: "TR Eklektic", cursive;
     font-size: 40pt;
     font-weight: 800;
@@ -622,7 +626,7 @@ sub {
 
 
 .post-link {
-    color: #EF0000;
+    color: #F40717;
     font-size: x-large;
     text-decoration: underline;
     text-align: justify;
@@ -631,7 +635,7 @@ sub {
 
 .post-link:hover, .post-link:focus,
 .post-title:hover, .post-title:focus {
-    color: #2B2D42;
+    color: #5B5555;
 }
 
 
@@ -641,7 +645,7 @@ ul {
 
 .section-title {
     font-family:   "La Belle Aurore", cursive;
-    color:          #EF0000;
+    color:          #F40717;
     padding-bottom: 1em;
     font-size:      36pt;
 }
@@ -650,34 +654,34 @@ ul {
     text-align: center;
     margin-top: 2em;
     font-size: 10pt;
-    color: #2e2D22;
-}
-
-
-.inner-title {
-    border: 3pt double #2b2D42;
+    color: #5B5555;
 }
 
 
 .btn.btn-dark.btn-outline-dark {
-    background-color: #437C90 /*#5FBFF9*/;
-    border-color: #000;
-    color: white;
+    background-color: #000 /*#5FBFF9*/;
+    color:            #1986C1;
+    margin-left:      0;
+    margin-right:     0;
+    border:           1pt outset #1986C1;
+    /*border-collapse: collapse;*/
 }
 
 
 .btn.btn-dark.btn-outline-dark:hover,
 .btn.btn-dark.btn-outline-dark:focus {
-    border-color: #437C90;
-    background-color: #000;
-    color: #437C90;
-    transition: .4s;
+    background-color: #1986C1;
+    color:            #000;
+    transition:       .6s;
+    border:           1pt ridge #1986C1;
+
 }
 
 
 .crud.btn-group {
     margin-top: 1em;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
+    /*padding: 0;*/
 }
 
 
@@ -688,19 +692,19 @@ ul {
 
 
 #watched-file-input {
-    border: 1.25pt solid white;
+    border: 1.25pt solid #fff;
     border-radius: 5px;
 }
 
 input[type="text"], input[type="url"], input[type="file"] {
     background: #000;
-    color: #EF0000;
+    color: #F40717;
     font-size: 14pt;
 }
 
 #watched-body-input, #heard-body-input, #learned-body-input, #thought-body-input {
     background: black;
-    color: #2095AD;
+    color: #1986C1;
     font-size: 12pt;
     text-align: justify;
     padding: 1.5em 2em 1em 2em;
@@ -717,21 +721,44 @@ label {
     font-size: 10pt;
     /*color: #01295F;*/
     /*color: #FF9F1C;*/
-    color: #BA9C3B;
+    color: #84BC00;
 }
 
 .list-cat-header {
     font-weight: 900;
-    color: #26413C;
+    color: #5B5555;
     border: 1pt solid #2b2D42;
     border-collapse:  collapse;
 }
 
 .list-inline a {
-    color: #BA9C3B;
-
+    color: #84BC00;
 }
 
 .list-group-flush.list-group-dark {
     text-align: center;
+}
+
+.btn-left {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-right {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.text-center.row.btn-group {
+    width: 100%;
+}
+
+.btn-div-left {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.btn-div-right {
+    justify-content: flex-start;
+    width: 100%;
 }

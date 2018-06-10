@@ -1,25 +1,46 @@
 
 
 <div id="solo-thought-post">
+
     {{#if post}}
+
         <div id="post-thought-title-div">
-            <h2 class="post-solo-title">{{post.post_title}}</h2>
+            <h2 class="post-solo-title"> {{post.post_title}} </h2>
         </div>
+
         <hr>
-        <p class="post-solo-body">{{post.post_body}}</p>
+        <p class="post-solo-body"> {{post.post_body}} </p>
         <hr>
-        <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
-        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
-        <div class="text-center">
-            <form class="thought-crud" action="/edit/thought/{{post.id}}" method="get">
-                <div class="crud btn-group" role="group">
-                    <button type=submit id=t-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
-                    <button type=submit id=t-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
-                </div>
-            </form>
+
+        <h6 class="post-publication">
+            Posted {{post.date_created}} by {{post.post_author}}
+        </h6>
+
+        {{#if date_last_edit}}
+            <p class="post-publication">Edited: {{this.date_last_edit}} </p>
+        {{/if}}
+
+        <div class="row btn-group text-center">
+            <div class="col">
+                <form class="crud-form-left" action="/edit/thought/{{post.id}}" method="get">
+                    <div class="form-group crud btn-group btn-div-left" role="group">
+                        <button type=submit id=t-crud-u class="btn btn-dark btn-outline-dark btn-left">MODIFY</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <form class="crud-form-right" action="/delete/thought/{{post.id}}" method="post">
+                    <div class="form-group crud btn-group btn-div-right" role="group">
+                        <button type=submit id=t-crud-d class="btn btn-dark btn-outline-dark btn-right">DELETE</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
         <br>
+
     {{else}}
         <p>No Post found for ID</p>
     {{/if}}
+
 </div>

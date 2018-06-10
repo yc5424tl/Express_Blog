@@ -130,7 +130,9 @@ router.get('/heard/:_id', function(req, res, next) {
     HeardData.findById(req.params._id)
         .then((post) => {
             if(post) {
-                res.render('../views/templates/view_single/heard.hbs', { post: post });
+                res.render('../views/templates/view_single/heard.hbs', {
+                    post:  post,
+                    title: post.post_title });
             }
             else {
                 next();
@@ -145,9 +147,11 @@ router.get('/heard/:_id', function(req, res, next) {
 
 router.get('/learned/:_id', function(req, res, next) {
     LearnedData.findById(req.params._id)
-        .then( (post) => {
+        .then((post) => {
             if(post) {
-                res.render('../views/templates/view_single/learned.hbs', { post: post });
+                res.render('../views/templates/view_single/learned.hbs', {
+                    post:  post,
+                    title: post.post_title});
             }
             else {
                 next();
@@ -162,9 +166,11 @@ router.get('/learned/:_id', function(req, res, next) {
 
 router.get('/thought/:_id', function(req, res, next) {
     ThoughtData.findById(req.params._id)
-        .then( (post) => {
+        .then((post) => {
             if(post) {
-                res.render('../views/templates/view_single/thought.hbs', { post: post });
+                res.render('../views/templates/view_single/thought.hbs', {
+                    post: post,
+                    title: post.post_title});
             }
             else {
                 next();
@@ -181,7 +187,9 @@ router.get('/watched/:_id', function(req, res, next) {
     WatchedData.findById(req.params._id)
         .then((post) => {
             if(post) {
-                res.render('../views/templates/view_single/watched.hbs', { post: post });
+                res.render('../views/templates/view_single/watched.hbs', {
+                    post:  post,
+                    title: post.post_title});
             }
             else {
                 next();
@@ -204,28 +212,15 @@ router.post('/new_heard', function(req, res, next) {
             post_author:   'testAuthor',
             post_title:    req.body.heardTitle,
             post_body:     req.body.heardBody,
-            date_created:  Date.now()
+            date_created:  Date.now(),
+            title:         'Today I Heard...'
         });
 
-        if(req.body.heardArtist) {
-            post.post_artist = req.body.heardArtist;
-        }
-
-        if(req.body.heardAlbum) {
-            post.post_album = req.body.heardAlbum;
-        }
-
-        if(req.body.heardTrack) {
-            post.post_track = req.body.heardTrack;
-        }
-
-        if(req.body.heardLink) {
-            post.post_url_link = req.body.heardLink;
-        }
-
-        if(req.body.heardRating) {
-            post.user_rating = req.body.heardRating;
-        }
+        if(req.body.heardArtist) { post.post_artist   = req.body.heardArtist; }
+        if(req.body.heardAlbum)  { post.post_album    = req.body.heardAlbum;  }
+        if(req.body.heardTrack)  { post.post_track    = req.body.heardTrack;  }
+        if(req.body.heardLink)   { post.post_url_link = req.body.heardLink;   }
+        if(req.body.heardRating) { post.user_rating   = req.body.heardRating; }
 
         post.save().then((newHeardPost) => {
             console.log('New heard post created: ', newHeardPost);
@@ -254,7 +249,8 @@ router.post('/new_learned', function(req, res, next) {
             post_author:   'testAuthor',
             post_title:    req.body.learnedTitle,
             post_body:     req.body.learnedBody,
-            date_created:  Date.now()
+            date_created:  Date.now(),
+            title:         'Today I Learned...'
         });
 
         post.save().then((newLearnedPost) => {
@@ -281,10 +277,11 @@ router.post('/new_thought', function(req, res, next) {
     if (req.body.thoughtTitle && req.body.thoughtBody) {
 
         post = new ThoughtData({
-            post_author: 'testAuthor',
-            post_title: req.body.thoughtTitle,
-            post_body: req.body.thoughtBody,
-            date_created: Date.now()
+            post_author:  'testAuthor',
+            post_title:   req.body.thoughtTitle,
+            post_body:    req.body.thoughtBody,
+            date_created: Date.now(),
+            title:        'Today I Thought...'
         });
 
         post.save().then((newThoughtPost) => {
@@ -315,6 +312,7 @@ router.post('/new_watched', function(req, res, next) {
             post_title:    req.body.watchedTitle,
             post_body:     req.body.watchedBody,
             date_created:  Date.now(),
+            title:         'Today I Watched...'
         });
 
         if(req.body.watchedUrl) {

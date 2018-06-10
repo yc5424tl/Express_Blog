@@ -1,8 +1,10 @@
 
 
 <div id="solo-heard-post">
+
     {{#if post}}
-        <h2 class="post-solo-title">{{post.post_title}}</h2>
+
+        <h2 class="post-solo-title"> {{post.post_title}} </h2>
 
         <ul class="list-group-flush list-group-dark">
             {{#if post.post_artist}}  <li class="list-inline"><b class="list-cat-header">Artist </b>         {{post.post_artist}}            </li>{{/if}}
@@ -11,22 +13,40 @@
             {{#if post.user_rating}}  <li class="list-inline"><b class="list-cat-header">Rating </b>         {{post.user_rating}}/10         </li>{{/if}}
             {{#if post.post_url_link}}<li class="list-inline"><b class="list-cat-header">Source </b><a href="{{post.post_url_link}}">Link</a></li>{{/if}}
         </ul>
-    <hr class="hr-2">
+
+        <hr class="hr-2">
         <p class="post-solo-body">{{post.post_body}}</p>
         <hr>
-        <h6 class="post-publication">Posted {{post.date_created}} by {{post.post_author}}</h6>
-        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
-        <div class="text-center">
-            <form class="heard-crud" action="/edit/heard/{{post.id}}" method="get">
-                <div class="form-group crud btn-group" role="group">
-                    <button type=submit id=h-crud-u class="btn btn-dark btn-outline-dark">UPDATE</button>
-                    <button type=submit id=h-crud-d class="btn btn-dark btn-outline-dark">REMOVE</button>
-                </div>
-            </form>
-            <!--<button type="button" class="btn btn-outline-dark btn-dark" id="{post._id}}"><a href="/edit/heard">UPDATE</a></button>-->
+
+        <h6 class="post-publication">
+            Posted {{post.date_created}} by {{post.post_author}}
+        </h6>
+
+        {{#if date_last_edit}}
+            <p class="post-publication">Edited: {{this.date_last_edit}} </p>
+        {{/if}}
+
+        <div class="row btn-group text-center">
+            <div class="col">
+                <form class="crud-form-left" action="/edit/heard/{{post.id}}" method="get">
+                    <div class="form-group crud btn-group btn-div-left" role="group">
+                        <button type=submit id=h-crud-u class="btn btn-dark btn-outline-dark btn-left">MODIFY</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <form class="crud-form-right" action="/delete/heard/{{post.id}}" method="post">
+                    <div class="form-group crud btn-group btn-div-right" role="group">
+                        <button type="submit" id="h-crud-d" class="btn btn-dark btn-outline-dark btn-right">DELETE</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
         <br>
+
     {{else}}
         <p>No Post found for ID</p>
     {{/if}}
+
 </div>

@@ -26,6 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 let indexRouter     = require('./routes/index');
 let usersRouter     = require('./routes/users');
 let crudRouter      = require('./routes/update');
+let delRouter       = require('./routes/delete');
 let app             = express();
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
@@ -46,6 +47,7 @@ app.use(expressWinston.logger({transports: [new winston.transports.Console({json
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/edit', crudRouter);
+app.use('/delete', delRouter);
 app.use(expressWinston.errorLogger({transports: [new winston.transports.Console({json: true, colorize: true})]}));
 
 
@@ -75,7 +77,14 @@ app.use(function(err, req, res) {
 });
 
 
-module.exports = app; expressHbs(); bodyParser.urlencoded({extended: false}); bodyParser.json({extended:false});
+module.exports = app;
+expressHbs();
+bodyParser.urlencoded(
+    {extended: false});
+bodyParser.json({
+    extended:false
+});
+
 
 
 

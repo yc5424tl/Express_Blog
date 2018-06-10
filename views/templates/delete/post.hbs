@@ -1,0 +1,14 @@
+<h1>Today I Stopped Watching...</h1>
+
+{{#if post}}
+    <div>
+        {{#each post}}
+            {{#if post.post_title}}Post: {{post.post_title}}{{/if}}
+            {{#if author}}Author: {{author}}{{/if}}
+        {{/each}}
+    </div>
+{{else}}
+    <p>Post Removed</p>
+{{/if}}
+
+
