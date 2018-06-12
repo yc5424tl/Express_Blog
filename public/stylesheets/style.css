@@ -12,8 +12,8 @@ body {
     /*font-family:      'Reem Kufi', sans-serif;*/
     /*font-family: Trixie-Plain, cursive;*/
     /*font-family: KaiTi, serif;*/
-    font-family: i, sans-serif;
-    font-size:        large;
+    font-family: Trixie-Plain, serif;
+    font-size:        24pt;
     width:            100%;
     height:           100%;
     margin:           0;
@@ -38,8 +38,10 @@ body {
 
 h1 {
     font-family:   "La Belle Aurore", cursive;
+    /*font-family: "Lexikos Plain", sans-serif;*/
     color:         #F40717;
     margin-bottom: 1em;
+    margin-top: 0;
 }
 
 
@@ -66,10 +68,14 @@ div {
     padding: 0;
 }
 
+.navbar-toggler-icon, .sidebar-toggle-button, .navbar-form {
+    font-size: 12pt;
+}
+
 
 
 /*******************  NAV  **************************/
-.nav > .nav-item.list-group-item {
+.navbar-nav > .nav-item.list-group-item {
     color:            #F40717;
     font-weight:      900;
     font-size:        20pt;
@@ -107,9 +113,14 @@ div {
 .navbar.navbar-dark {
     background: transparent;
     display:    inline;
-    margin-top: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+/*#navbar-div {*/
+    /*background-color: #84BC00;*/
+    /*margin: 0;*/
+/*}*/
 /* Navbar */
 @media all and (max-width: 567px) {
     #nav-login-form {
@@ -132,14 +143,21 @@ div {
 .navbar-toggler-icon {
     color: #1986C1;
 }
+
+#top-nav{
+    margin: 0;
+    padding: 0;
+}
 /******************  END NAV  ************************/
 
 
 
 /******************  SIDEBAR  ************************/
 #sidebar-toggle-button {
-    padding:   .2em 1em;
-    font-size: 1em;
+    /*padding:   .2em 1em;*/
+    /*font-size: 1em;*/
+    padding: inherit;
+    font-size: .75em;
     border:    none;
 }
 
@@ -164,6 +182,7 @@ div {
     height:           100%;
     border-right:     1pt solid #fff;
     max-width:        435px;
+    width: min-content ;
 }
 
 
@@ -194,11 +213,12 @@ div {
 #content-left {
     bottom:        0;
     font-size:     large;
-    padding-top:   2em;
+    /*padding-top:   2em;*/
     margin-left:   1em;
     padding-right: 2em;
     width:         auto;
     background-color: transparent;
+    margin-top: 0;
 }
 
 
@@ -206,6 +226,7 @@ div {
     width: 100%;
     bottom: 0;
     margin: 0;
+    padding: 0;
 
 }
 
@@ -214,8 +235,11 @@ div {
     overflow: hidden;
     height: 100%;
     position: fixed;
-    margin: 0 auto;
+    margin: 0;
     object-fit: scale-down;
+    padding: 0;
+    z-index: -1;
+    top: 0;
 }
 
 
@@ -352,7 +376,7 @@ footer {
     min-height:  30px;
     position:    relative;
     bottom:      0;
-    font-size:   x-small;
+    font-size:   small;
     display:     block;
     text-align:  center;
 }
@@ -624,20 +648,28 @@ sub {
     font-weight: 800;
 }
 
-
 .post-link {
-    color: #F40717;
-    font-size: x-large;
-    text-decoration: underline;
-    text-align: justify;
     width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    color: #F40717;
+    text-decoration: underline;
+    font-size: 20pt;
+    margin-bottom: .75em;
+}
+.post-title {
+    color: #F40717;
+    font-size: 22pt;
+    text-decoration: underline;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .post-link:hover, .post-link:focus,
 .post-title:hover, .post-title:focus {
     color: #5B5555;
 }
-
 
 ul {
     list-style: none;
@@ -653,7 +685,7 @@ ul {
 .post-publication {
     text-align: center;
     margin-top: 2em;
-    font-size: 10pt;
+    font-size: 9pt;
     color: #5B5555;
 }
 
@@ -761,4 +793,26 @@ label {
 .btn-div-right {
     justify-content: flex-start;
     width: 100%;
+}
+
+.update-btn-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.publication-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-page {
+    margin-top: 2.5em;
+}
+
+.post-publication.edit {
+    margin-top: 0;
 }

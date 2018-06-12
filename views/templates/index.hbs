@@ -5,7 +5,9 @@
         {{#each heard}}
                 <a class="post-link" href="heard/{{id}}"><span class="post-title">{{post_title}}</span></a>
                 <p class="post-body">{{post_body}}</p>
-                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+                <div class="publication-div">
+                    <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+                </div>
                 {{#if heard.date_last_edit}}
                     <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
                 {{/if}}
@@ -21,9 +23,11 @@
 <div class="post-container" id="latest-learned">
     {{#if learned}}
         {{#each learned}}
-            <a class="post-link" href="learned/{{id}}"><span class="post-title">{{post_title}}</span></a>
+            <a class="post-link" href="learned/{{id}}"><span class="post-title"> {{post_title}} </span></a>
             <p class="post-body">{{post_body}}</p>
-            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            <div class="publication-div">
+                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+            </div>
             {{#if learned.date_last_edit}}
                 <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
             {{/if}}
@@ -39,9 +43,11 @@
 <div class="post-container" id="latest-thought">
     {{#if thought}}
         {{#each thought}}
-            <a class="post-link" href="thought/{{id}}"><span class="post-title">{{post_title}}</span></a>
+            <a class="post-link" href="thought/{{id}}"><span class="post-title"> {{post_title}} </span></a>
             <p class="post-body">{{post_body}}</p>
-            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+            <div class="publication-div">
+                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+            </div>
             {{#if thought.date_last_edit}}
                 <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
             {{/if}}
@@ -55,22 +61,32 @@
 
 
 <div class="post-container" id="latest-watched">
+
     {{#if watched}}
+
         {{#each watched}}
-            <a class="post-link" href="watched/{{id}}"><span class="post-title">{{post_title}}</span></a>
-            <p class="post-body">{{post_body}}</p>
-            <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+
+            <div class="publication-div">
+                <a class="post-link" href="watched/{{id}}"><span class="post-title"> {{post_title}} </span></a>
+            </div>
+
+            <p class="post-body"> {{post_body}} </p>
+
+            <div class="publication-div">
+                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+            </div>
+
             {{#if watched.date_last_edit}}
-                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                <sub class="post-last-edit">Edited: {{date_last_edit}} </sub>
             {{/if}}
+
         {{/each}}
+
     {{else}}
         <p>No Today I Watched Posts</p>
     {{/if}}
+
 </div>
-
-<hr>
-
 
 <div id="home-page">
     <h1>Today I...</h1>

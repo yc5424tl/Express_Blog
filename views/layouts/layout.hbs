@@ -9,10 +9,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-          crossorigin="anonymous">
+    <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"-->
+          <!--rel="stylesheet"-->
+          <!--integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"-->
+          <!--crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
 
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|La+Belle+Aurore|Reem+Kufi"
@@ -29,11 +31,12 @@
 
 <body>
 <!----------------------------------NAVBAR---------------------------->
-<nav class="navbar navbar-dark" role="navigation">
-    <div class="container-fluid">
 
-        <button id='sidebar-toggle-button' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarToggle">
-            <span class="navbar-toggler-icon pull-right"> </span>
+<nav class="navbar navbar-dark" role="navigation" id="top-nav">
+    <div class="container-fluid" id="navbar-div">
+
+        <button id='sidebar-toggle-button' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-div">
+            <span class="navbar-toggler-icon"> </span>
         </button>
 
         <form class="form-inline navbar-form" id="nav-login-form">
@@ -56,6 +59,7 @@
         </form>
     </div>
 </nav>
+
 <!----------------------------------END NAVBAR------------------------>
 
 <div id="body">
@@ -63,8 +67,8 @@
 
 
         <!------------------------- SIDEBAR -------------------------->
-        <div id="sidebar-div" class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <ul class="nav list-group" role="directory" id="nav-list">
+        <div id="sidebar-div" class="collapse navbar-collapse col-xl-3 col-lg-3 col-md-4 col-sm-5">
+            <ul class="navbar-nav list-group" role="directory" id="nav-list">
                 <li class="nav-item list-group-item" value="home">   <a class="nav-link" href="/"       >...Went Home</a></li>
                 <li class="nav-item list-group-item" value="learned"><a class="nav-link" href="/learned">...Learned</a></li>
                 <li class="nav-item list-group-item" value="thought"><a class="nav-link" href="/thought">...Thought</a></li>
@@ -72,7 +76,6 @@
                 <li class="nav-item list-group-item" value="watched"><a class="nav-link" href="/watched">...Watched</a></li>
                 <li class="nav-item list-group-item" value="post">   <a class="nav-link" href="/wrote"  >...Wrote</a></li>
             </ul>
-
         </div>
         <!--------------------------END SIDEBAR----------------------->
 
@@ -110,19 +113,32 @@
 </div>
 
 
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+<!--<script-->
+        <!--src="https://code.jquery.com/jquery-3.3.1.min.js"-->
+        <!--integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="-->
+        <!--crossorigin="anonymous"></script>-->
+
+<!--<script-->
+        <!--src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
+        <!--integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+        <!--crossorigin="anonymous"></script>-->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"-->
+        <!--integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"-->
+        <!--crossorigin="anonymous"></script>-->
 
 <script src="/javascripts/index_style.js"></script>
 

@@ -2,6 +2,7 @@
 const express      = require('express');
 const bodyParser     = require('body-parser');
 
+
 let path           = require('path');
 let logger         = require('morgan');
 let cookieParser   = require('cookie-parser');
@@ -15,6 +16,8 @@ let expressWinston = require('express-winston');
 let winston        = require('winston');
 let db_url         = process.env.NODE_BLOG_DB;
 let sess_sec       = process.env.BLOG_SESS_SEC;
+
+
 
 mongoose.connect(db_url)
     .then( () => {console.log('Connected to mLab');})
@@ -31,7 +34,22 @@ let app             = express();
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
 // view engine setup
-app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
+app.engine('.hbs', expressHbs({
+    defaultLayout: 'layout',
+    extname: '.hbs',
+    helpers: {
+        postPreview(text) {
+            let formattedPreview = '';
+            if(text.length < 100) {
+                formattedPreview = text;
+            }
+            else{
+                formattedPreview = text.substring(0, 100) + '...';
+            }
+            return formattedPreview;
+        }
+    }
+}));
 app.set('view engine', '.hbs');
 
 app.use(logger('combined', {stream: accessLogStream})); // combined, common, dev, short, tiny

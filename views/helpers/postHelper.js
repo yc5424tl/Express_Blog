@@ -1,15 +1,14 @@
-// const exphbs = require("hbs");
 //
-//
-// exphbs.registerHelper('postPreview', post_body => {
-//     let body = post_body;
-//     if (body.length > 150) {
-//         body = body.slice(0, 100);
+// module.exports= function postPreview(targetString) {
+//     let preparedPreview = '';
+//     if(targetString.length < 100) {
+//         preparedPreview = targetString;
 //     }
-//         return body;
-// });
-//
-// module.exports = exphbs;
+//     else {
+//         preparedPreview = targetString.substring(0, 100) + '...';
+//     }
+//     return new Handlebars.SafeString(preparedPreview)
+// };
 
 
 

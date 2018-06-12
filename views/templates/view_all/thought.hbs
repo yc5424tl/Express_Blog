@@ -7,9 +7,10 @@
                 <li class="thought-post-li">
                     <div class="post-container">
                         <a class="post-link" href="/thought/{{this.id}}" name="p-link">{{this.post_title}}</a>
-                        <p class="author-time">
+                        <p class="post-preview"> {{postPreview post_body}} </p>
+                        <p class="post-publication">
                             Posted by {{this.post_author}} @ {{this.date_created}}</p>
-                        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
+                        {{#if date_last_edit}}<p class="post-publication edit">Edited: {{this.date_last_edit}}</p>{{/if}}
                     </div>
                 </li>
             {{/each}}

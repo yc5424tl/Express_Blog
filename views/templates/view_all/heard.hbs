@@ -14,9 +14,9 @@
                             {{#if user_rating}}  <li class="list-inline"><b class="list-cat-header">Rating</b> {{this.user_rating}}/10</li>{{/if}}
                             {{#if post_url_link}}<li class="list-inline"><b class="list-cat-header">Source </b><a href="{{this.post_url_link}}">Link</a></li>{{/if}}
                         </ul>
-                        <p class="post-preview">{{post_body}}</p>
+                        <p class="post-preview">{{postPreview post_body}}</p>
                         <h6 class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</h6>
-                        {{#if date_last_edit}}<p class="post-publication">Edited: {{this.date_last_edit}}</p>{{/if}}
+                        {{#if date_last_edit}}<p class="post-publication edit">Edited: {{this.date_last_edit}}</p>{{/if}}
                     </div>
                 </li>
             {{/each}}
