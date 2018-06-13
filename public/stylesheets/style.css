@@ -601,6 +601,8 @@ footer {
     font-weight: 800;
     color: #F40717;
     text-decoration: underline;
+    align-items: center;
+    display: flex;
 }
 
 
@@ -657,7 +659,6 @@ sub {
 .post-link {
     width: 100%;
     align-items: center;
-    justify-content: space-around;
     display: flex;
     color: #F40717;
     text-decoration: underline;
