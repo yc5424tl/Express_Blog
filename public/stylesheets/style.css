@@ -652,7 +652,6 @@ sub {
 .post-link {
     width: 100%;
     align-items: center;
-    display: flex;
     color: #F40717;
     text-decoration: underline;
     font-size: 20pt;
