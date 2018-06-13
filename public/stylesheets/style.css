@@ -667,13 +667,12 @@ sub {
 /*}*/
 
 .post-title {
-    margin-bottom: 1em;
+    margin-bottom: 0;
     font-weight: 800;
     color: #F40717;
     text-decoration: underline;
     align-items: center;
-    align-content: center;
-    text-justify: auto;
+    justify-content: center;
     display: flex;
     font-size: 22pt;
 }
