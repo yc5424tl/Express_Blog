@@ -130,3 +130,4 @@ fabric.properties
 .gitignore
 .idea/
 bin/
+/node_modules/

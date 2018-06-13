@@ -40,6 +40,8 @@ let delRouter       = require('./routes/delete');
 let app             = express();
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
+app.set('port', (process.env.PORT || 3000));
+
 // view engine setup
 app.engine('.hbs', expressHbs({
     defaultLayout: 'layout',
@@ -101,14 +103,16 @@ app.use(function(err, req, res) {
     res.render('error');
 });
 
-
-module.exports = app;
-expressHbs();
-bodyParser.urlencoded(
-    {extended: false});
-bodyParser.json({
-    extended:false
+app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'));
 });
+
+
+module.exports =
+    app;
+    expressHbs();
+    bodyParser.urlencoded({extended: false});
+    bodyParser.json({extended:false});
 
 
 
