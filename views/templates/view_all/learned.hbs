@@ -10,8 +10,8 @@
                         {{#if this.post_body}}
                             <p class="post-preview"> {{postPreview post_body}} </p>
                         {{/if}}
-                        <p class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</p>
-                        {{#if date_last_edit}}<p class="post-publication edit">Edited: {{this.date_last_edit}}</p>{{/if}}
+                        <h5 class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</h5>
+                        {{#if date_last_edit}}<h5 class="post-publication edit">Edited: {{this.date_last_edit}}</h5>{{/if}}
                     </div>
                 </li>
             {{/each}}

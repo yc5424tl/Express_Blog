@@ -6,10 +6,10 @@
                 <a class="post-link" href="heard/{{id}}"><span class="post-title">{{post_title}}</span></a>
                 <p class="post-body">{{postPreview post_body}}</p>
                 <div class="publication-div">
-                    <sub class="post-publication">Posted by {{post_author}} @ {{date_created}}</sub>
+                    <h5 class="post-publication">Posted by {{post_author}} @ {{date_created}}</h5>
                 </div>
                 {{#if heard.date_last_edit}}
-                    <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                    <h5 class="post-last-edit">Edited: {{date_last_edit}}</h5>
                 {{/if}}
         {{/each}}
     {{else}}
@@ -23,13 +23,13 @@
 <div class="post-container" id="latest-learned">
     {{#if learned}}
         {{#each learned}}
-            <a class="post-link" href="learned/{{id}}"><span class="post-title"> {{post_title}} </span></a>
+            <a class="post-link" href="learned/{{id}}"><span class="post-title">{{post_title}}</span></a>
             <p class="post-body">{{postPreview post_body}}</p>
             <div class="publication-div">
-                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+                <h5 class="post-publication">Posted by {{post_author}} @ {{date_created}} </h5>
             </div>
             {{#if learned.date_last_edit}}
-                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                <h5 class="post-last-edit">Edited: {{date_last_edit}}</h5>
             {{/if}}
         {{/each}}
     {{else}}
@@ -43,13 +43,13 @@
 <div class="post-container" id="latest-thought">
     {{#if thought}}
         {{#each thought}}
-            <a class="post-link" href="thought/{{id}}"><span class="post-title"> {{post_title}} </span></a>
+            <a class="post-link" href="thought/{{id}}"><span class="post-title">{{post_title}}</span></a>
             <p class="post-body">{{postPreview post_body}}</p>
             <div class="publication-div">
-                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+                <h5 class="post-publication">Posted by {{post_author}} @ {{date_created}} </h5>
             </div>
             {{#if thought.date_last_edit}}
-                <sub class="post-last-edit">Edited: {{date_last_edit}}</sub>
+                <h5 class="post-last-edit">Edited: {{date_last_edit}}</h5>
             {{/if}}
         {{/each}}
     {{else}}
@@ -73,11 +73,11 @@
             <p class="post-body"> {{postPreview post_body}} </p>
 
             <div class="publication-div">
-                <sub class="post-publication">Posted by {{post_author}} @ {{date_created}} </sub>
+                <h5 class="post-publication">Posted by {{post_author}} @ {{date_created}} </h5>
             </div>
 
             {{#if watched.date_last_edit}}
-                <sub class="post-last-edit">Edited: {{date_last_edit}} </sub>
+                <h5 class="post-last-edit">Edited: {{date_last_edit}} </h5>
             {{/if}}
 
         {{/each}}

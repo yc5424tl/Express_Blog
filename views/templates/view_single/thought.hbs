@@ -12,12 +12,12 @@
         <p class="post-solo-body"> {{post.post_body}} </p>
         <hr>
 
-        <h6 class="post-publication">
+        <h5 class="post-publication">
             Posted {{post.date_created}} by {{post.post_author}}
-        </h6>
+        </h5>
 
         {{#if date_last_edit}}
-            <p class="post-publication edit">Edited: {{this.date_last_edit}} </p>
+            <h5 class="post-publication edit">Edited: {{this.date_last_edit}} </h5>
         {{/if}}
 
         <div class="row btn-group text-center">

@@ -8,10 +8,10 @@
                     <div class="post-container">
                         <a class="post-link" href="/watched/{{this._id}}"> {{this.post_title}} </a>
                         <p class="post-preview"> {{postPreview post_body}} </p>
-                        <p class="post-publication"> Posted by {{this.post_author}} @ {{this.date_created}} </p>
+                        <h5 class="post-publication"> Posted by {{this.post_author}} @ {{this.date_created}} </h5>
 
                         {{#if date_last_edit}}
-                            <p class="post-publication edit">Edited: {{this.date_last_edit}} </p>
+                            <h5 class="post-publication edit">Edited: {{this.date_last_edit}} </h5>
                         {{/if}}
 
                     </div>
