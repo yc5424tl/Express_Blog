@@ -131,3 +131,4 @@ fabric.properties
 .idea/
 bin/
 /node_modules/
+.env 
