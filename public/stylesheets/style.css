@@ -596,14 +596,7 @@ footer {
 }
 
 
-.post-title {
-    margin-bottom: 4em;
-    font-weight: 800;
-    color: #F40717;
-    text-decoration: underline;
-    align-items: center;
-    display: flex;
-}
+
 
 
 .post-solo-title {
@@ -665,12 +658,24 @@ sub {
     font-size: 20pt;
     margin-bottom: .75em;
 }
+/*.post-title {*/
+    /*color: #F40717;*/
+    /*font-size: 22pt;*/
+    /*text-decoration: underline;*/
+    /*margin-bottom: 0;*/
+    /*padding-bottom: 0;*/
+/*}*/
+
 .post-title {
+    margin-bottom: 1em;
+    font-weight: 800;
     color: #F40717;
-    font-size: 22pt;
     text-decoration: underline;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    align-items: center;
+    align-content: center;
+    text-justify: auto;
+    display: flex;
+    font-size: 22pt;
 }
 
 .post-link:hover, .post-link:focus,
