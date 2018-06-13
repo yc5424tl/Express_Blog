@@ -672,6 +672,7 @@ sub {
     text-decoration: underline;
     align-items: center;
     justify-content: center;
+    text-justify: distribute;
     display: flex;
     font-size: 22pt;
 }
