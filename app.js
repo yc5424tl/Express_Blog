@@ -19,7 +19,11 @@ let sess_sec       = process.env.BLOG_SESS_SEC;
 
 let passport = require('passport');
 let GoogleStrategy = require('passport-google-oauth');
-
+// passport.use(new GoogleStrategy({
+//     consumerKey: GOOGLE_CONSUMER_KEY,
+//     consumerSecret: GOOGLE_CONSUMER_SECRET,
+//     callbackURL: "h"
+// }));
 
 
 mongoose.connect(db_url)
