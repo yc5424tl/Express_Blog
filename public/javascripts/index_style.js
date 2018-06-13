@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
 
+    let paraOdd = $('p:odd');
+
 
     setInterval(function () {
         let dateTime;
@@ -13,8 +15,10 @@ $(document).ready(function () {
         document.getElementById("date-time-span").textContent = dateTime;
     }, 1000);
 
+    // $("p:even").classList.add("white-blur");
 
-    $("p:odd").css("color", "#437C90");
+    paraOdd.css("color", "#437C90");
+    // paraOdd.classList.add('blue-blur');
 
 
     $("#sidebar-toggle-button").click(function () {
@@ -56,9 +60,25 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         setFileInputSize();
         });
+
+
+    // $('.form-control.login').focusin(function() {
+    //     $('#body * ').css({
+    //         opacity: 0.8
+    //         // "-webkit-filter": 'blur(2px)',
+    //         // "-moz-filter": "blur(2px)",
+    //         // "-o-filter": "blur(2px)",
+    //         // "filter": "blur(2px)",
+    //         // "color": "transparent",
+    //         // "text-shadow": "0 0 8px #FFF"
+    //     })
+    // });
+    // $('.form-control.login').focusout(function() {
+    //     $('#body * ').css({
+    //         opacity: 1.0
+    //     })
+    // });
 });
-
-
 
 
 function setFileInputSize() {

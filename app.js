@@ -17,6 +17,9 @@ let winston        = require('winston');
 let db_url         = process.env.NODE_BLOG_DB;
 let sess_sec       = process.env.BLOG_SESS_SEC;
 
+let passport = require('passport');
+let GoogleStrategy = require('passport-google-oauth');
+
 
 
 mongoose.connect(db_url)

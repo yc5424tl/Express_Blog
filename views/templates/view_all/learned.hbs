@@ -7,7 +7,9 @@
                 <li class="learned-post-1i">
                     <div class="post-container">
                         <a class="post-link" href="/learned/{{this.id}}">{{this.post_title}}</a>
-                        <p class="post-preview"> {{postPreview post_body}} </p>
+                        {{#if this.post_body}}
+                            <p class="post-preview"> {{postPreview post_body}} </p>
+                        {{/if}}
                         <p class="post-publication">Posted by {{this.post_author}} @ {{this.date_created}}</p>
                         {{#if date_last_edit}}<p class="post-publication edit">Edited: {{this.date_last_edit}}</p>{{/if}}
                     </div>
