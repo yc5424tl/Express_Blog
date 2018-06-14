@@ -659,6 +659,8 @@ sub {
 .post-link {
     width: 100%;
     align-items: center;
+    justify-content: center;
+    display: flex;
     color: #F40717;
     text-decoration: underline;
     font-size: 20pt;
@@ -695,6 +697,9 @@ ul {
 
 .section-title {
     /*font-family:   "TR Eklektic", cursive;*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
     font-family:   "La Belle Aurore", cursive;
     color:          #F40717;
     padding-bottom: 1em;
