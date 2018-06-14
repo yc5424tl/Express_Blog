@@ -33,10 +33,10 @@ let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-let indexRouter     = require('./routes/index');
-let usersRouter     = require('./routes/users');
-let crudRouter      = require('./routes/update');
-let delRouter       = require('./routes/delete');
+let indexRouter     = require('./routes/index.js');
+let usersRouter     = require('./routes/users.js');
+let crudRouter      = require('./routes/update.js');
+let delRouter       = require('./routes/delete.js');
 let app             = express();
 let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 

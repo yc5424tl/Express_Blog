@@ -18,24 +18,24 @@
         <p class="post-solo-body">{{post.post_body}}</p>
         <hr>
 
-        <h5 class="post-publication">
+        <h6 class="post-publication">
             Posted {{post.date_created}} by {{post.post_author}}
-        </h5>
+        </h6>
 
-        {{#if date_last_edit}}
-            <h5 class="post-publication edit">Edited: {{this.date_last_edit}} </h5>
+        {{#if post.date_last_edit}}
+            <p class="post-publication edit">Edited: {{post.date_last_edit}} </p>
         {{/if}}
 
         <div class="row btn-group text-center">
             <div class="col">
-                <form class="crud-form-left" action="/edit/heard/{{post.id}}" method="get">
+                <form class="crud-form-left" action="/edit/heard/{{post._id}}" method="get">
                     <div class="form-group crud btn-group btn-div-left" role="group">
                         <button type=submit id=h-crud-u class="btn btn-dark btn-outline-dark btn-left">MODIFY</button>
                     </div>
                 </form>
             </div>
             <div class="col">
-                <form class="crud-form-right" action="/delete/heard/{{post.id}}" method="post">
+                <form class="crud-form-right" action="/delete/heard/{{post._id}}" method="post">
                     <div class="form-group crud btn-group btn-div-right" role="group">
                         <button type="submit" id="h-crud-d" class="btn btn-dark btn-outline-dark btn-right">DELETE</button>
                     </div>

@@ -1,44 +1,48 @@
 
 <div>
-    <form action="/edit/heard/{{post.id}}" method="post">
-        <div class="form-group">
-            <label for="heard-title-input">Title</label>
-            <input name="postTitle" class="form-control" type="text" value="{{post.post_title}}" id="heard-title-input">
-        </div>
-        <div class="form-group">
-            <label for="heard-body-input">Comment</label>
-            <textarea name="postBody" class="form-control" rows="8" id="heard-body-input">{{post.post_body}}</textarea>
-        </div>
-        <div class="form-group">
-            {{#if post.post_artist}}
-                <label for="heard-artist-input">Artist</label>
-                <input name="postArtist" class="form-control" type="text" id="heard-artist-input" value="{{post.post_artist}}">
-            {{/if}}
-        </div>
-        <div class="form-group">
-            {{#if post.post_album}}
-                <label for="heard-album-input">Album</label>
-                <input name="postAlbum" class="form-control" type="text" id="heard-album-input" value="{{post.post_album}}">
-            {{/if}}
-        </div>
-        <div class="form-group">
-            {{#if post.post_track}}
-                <label for="heard-track-input">Track</label>
-                <input name="postTrack" class="form-control" type="text" id="heard-track-input" value="{{post.post_track}}">
-            {{/if}}
-        </div>
-        <div class="form-group">
-            {{#if post.post_url_link}}
-                <label for="heard-link-input">Link</label>
-                <input name="postLink" class="form-control" type="text" id="heard-link-input" value="{{post.post_url_link}}">
-            {{/if}}
-        </div>
-        <div class="form-group">
-            {{#if post.user_rating}}
-                <label for="heard-rating">Rating</label>
-                <input name="postRating" class="form-control" type="text" id="heard-rating" value="{{post.user_rating}}">
-            {{/if}}
-        </div>
-        <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>
-    </form>
+    {{#if post}}
+
+        <form action="/edit/heard/{{post._id}}" method="post">
+            <div class="form-group">
+                <label for="heard-title-input">Title</label>
+                <input name="postTitle" class="form-control" type="text" value="{{post.post_title}}" id="heard-title-input">
+            </div>
+            <div class="form-group">
+                <label for="heard-body-input">Comment</label>
+                <textarea name="postBody" class="form-control" rows="8" id="heard-body-input">{{post.post_body}}</textarea>
+            </div>
+            <div class="form-group">
+                {{#if post.post_artist}}
+                    <label for="heard-artist-input">Artist</label>
+                    <input name="postArtist" class="form-control" type="text" id="heard-artist-input" value="{{post.post_artist}}">
+                {{/if}}
+            </div>
+            <div class="form-group">
+                {{#if post.post_album}}
+                    <label for="heard-album-input">Album</label>
+                    <input name="postAlbum" class="form-control" type="text" id="heard-album-input" value="{{post.post_album}}">
+                {{/if}}
+            </div>
+            <div class="form-group">
+                {{#if post.post_track}}
+                    <label for="heard-track-input">Track</label>
+                    <input name="postTrack" class="form-control" type="text" id="heard-track-input" value="{{post.post_track}}">
+                {{/if}}
+            </div>
+            <div class="form-group">
+                {{#if post.post_url_link}}
+                    <label for="heard-link-input">Link</label>
+                    <input name="postLink" class="form-control" type="text" id="heard-link-input" value="{{post.post_url_link}}">
+                {{/if}}
+            </div>
+            <div class="form-group">
+                {{#if post.user_rating}}
+                    <label for="heard-rating">Rating</label>
+                    <input name="postRating" class="form-control" type="text" id="heard-rating" value="{{post.user_rating}}">
+                {{/if}}
+            </div>
+            <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>
+        </form>
+
+    {{/if}}
 </div>

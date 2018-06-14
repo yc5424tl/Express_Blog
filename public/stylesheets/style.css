@@ -129,8 +129,8 @@ div {
 #navbar-div {
 
     background: linear-gradient(darkslategrey, black);
-    opacity: 0.5;
-    margin: 0.5em 0 0.5em 0;
+    opacity: 0.7;
+    margin: 0 0 1em 0;
 }
 
 
@@ -688,7 +688,7 @@ sub {
 
 .post-link:hover, .post-link:focus,
 .post-title:hover, .post-title:focus {
-    color: #5B5555;
+    color: #f46e07;
 }
 
 ul {

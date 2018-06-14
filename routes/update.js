@@ -178,11 +178,12 @@ router.post('/thought/:_id', (req, res, next) => {
         });
     });
 
-router.get('/watched/:id', (req, res, next) => {
+
+router.get('/watched/:_id', (req, res, next) => {
     watchedTable.findById(req.params._id)
         .then((post) => {
             if(post) {
-                res.render('../views/templates/update_forms/watched.hbs', { post: post });
+                res.render('../views/templates/update_forms/watched.hbs', { post: post, title: 'Edit Post' });
             }
             else {
                 next();
@@ -192,6 +193,7 @@ router.get('/watched/:id', (req, res, next) => {
             next(err);
         });
     });
+
 
 router.post('/watched/:_id', (req, res, next) => {
 

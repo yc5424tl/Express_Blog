@@ -1,24 +1,26 @@
 
 <div>
-    <form action="/edit/watched/{{post.id}}" method="post">
-        <div class="form-group">
-            <label for="watched-title-input">Title</label>
-            <input name="postTitle" class="form-control" type="text" value="{{post.post_title}}" id="watched-title-input">
-        </div>
-        <div class="form-group">
-            <label for="watched-body-input">Comment</label>
-            <textarea name="postBody" class="form-control" rows=8 id="watched-body-input">{{post.post_body}}</textarea>
-        </div>
-        <div class="form-group">
-            <label for="watched-link-input">Link</label>
-            <input name="postLink" class="form-control" type="url" value="{{post.post_url_link}}" id="watched-link-input">
-        </div>
-        <div class="form-group">
-            <label for="watched-file-input">File</label>
-            <input name="postFile" class="form-control-file" type="file" value="{post.post_file_uri}}" id="watched-file-input">
-        </div>
-        <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>
-    </form>
+    {{#if post}}
+            <form action="/edit/watched/{{post._id}}" method="post">
+                <div class="form-group">
+                    <label for="watched-title-input">Title</label>
+                    <input name="postTitle" class="form-control" type="text" value="{{post.post_title}}" id="watched-title-input">
+                </div>
+                <div class="form-group">
+                    <label for="watched-body-input">Comment</label>
+                    <textarea name="postBody" class="form-control" rows=8 id="watched-body-input">{{post.post_body}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="watched-link-input">Link</label>
+                    <input name="postLink" class="form-control" type="url" value="{{post.post_url_link}}" id="watched-link-input">
+                </div>
+                <div class="form-group">
+                    <label for="watched-file-input">File</label>
+                    <input name="postFile" class="form-control-file" type="file" value="{{post.post_file_uri}}" id="watched-file-input">
+                </div>
+                <button type="submit" class="btn btn-outline-dark btn-dark update-btn">UPDATE</button>
+            </form>
+    {{/if}}
 </div>
 
 

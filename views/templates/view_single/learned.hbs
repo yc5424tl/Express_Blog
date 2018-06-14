@@ -13,20 +13,20 @@
             Posted {{post.date_created}} by {{post.post_author}}
         </h5>
 
-        {{#if date_last_edit}}
-            <h5 class="post-publication edit"> Edited: {{this.date_last_edit}} </h5>
+        {{#if post.date_last_edit}}
+            <h5 class="post-publication edit"> Edited: {{post.date_last_edit}} </h5>
         {{/if}}
 
         <div class="row btn-group text-center">
             <div class="col">
-                <form class="crud-form-left" action="/edit/learned/{{post.id}}" method="get">
+                <form class="crud-form-left" action="/edit/learned/{{post._id}}" method="get">
                     <div class="form-group crud btn-group btn-div-left" role="group">
                         <button type=submit id=l-crud-u class="btn btn-dark btn-outline-dark btn-left">MODIFY</button>
                     </div>
                 </form>
             </div>
             <div class="col">
-                <form class="crud-form-right" action="/delete/learned/{{post.id}}" method="post">
+                <form class="crud-form-right" action="/delete/learned/{{post._id}}" method="post">
                     <div class="form-group crud btn-group btn-div-right" role="group">
                         <button type=submit id=l-crud-d class="btn btn-dark btn-outline-dark btn-right">DELETE</button>
                     </div>
