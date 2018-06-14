@@ -3,3 +3,18 @@ FORMS FORMS FORMS FORMS FORMS FORMS
 HEADER
 
     form.id = form-header
+
+
+
+http://www.kater-bater.herokuapp.com/oauth2callback
+
+KaterBaterWeb (presented to user @ signin)
+
+k8expressBlog (project name in google dev)
+
+
+ClientID
+479356190345-0abielh1heghrf7u0jbpulr5rt3dk13s.apps.googleusercontent.com
+
+Client Secret
+epEEclnHX2SsHO6dAmgeFq7o

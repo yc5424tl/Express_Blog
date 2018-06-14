@@ -9,6 +9,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <meta name="google-signin-client_id" content="479356190345-0abielh1heghrf7u0jbpulr5rt3dk13s.apps.googleusercontent.com">
+
     <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"-->
           <!--rel="stylesheet"-->
           <!--integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"-->
@@ -22,6 +24,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Playfair+Display|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <link href="/stylesheets/style.css"
           rel="stylesheet">
@@ -43,6 +47,8 @@
         <form class="form-inline navbar-form" id="nav-login-form">
 
             <div id='user_login' class="form-group nav navbar-nav float-lg-right">
+
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
                 <label class="control-label" for="username-field">
                     <input id="username-field" class="form-control login" type="text" placeholder="User"></label>

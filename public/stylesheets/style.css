@@ -142,9 +142,16 @@ div {
 }
 
 
-#username-field, #password-field, #submit-btn {
+#username-field, #password-field, #submit-btn, .g-signin2 {
     display: none;
     margin:  0 0 0 5px;
+    background: transparent;
+    opacity: 0.9;
+}
+
+.g-signin2 {
+    background-color: #000;
+    opacity: 0.5;
 }
 
 
@@ -598,8 +605,13 @@ footer {
 
 .post-container {
     border-bottom: 3pt ridge #5B5555;
-    margin-top: 2em;
+    margin: 2em 0 2em 0;
     padding-bottom: 2em;
+
+}
+
+.post-preview {
+    font-size: 12pt;
 }
 
 
@@ -624,7 +636,7 @@ footer {
 
 hr {
     background-color: #5B5555;/*#326066;#5F5449;#0B2027;*/
-    /*margin-bottom: 7%;*/
+    /*margin-bottom: 7%;*/;
 }
 
 sub {
@@ -634,6 +646,7 @@ sub {
 .post-body {
     color: #fff;/*#437c90;#5FBFF9;*/
     margin-top: 1em;
+    font-size: 11pt;
  }
 
 
@@ -675,15 +688,15 @@ sub {
 /*}*/
 
 .post-title {
-    margin-bottom: 0;
-    font-weight: 800;
+    font-family: "La Belle Aurore", cursive;
+    margin-bottom: 1.5em;
     color: #F40717;
     text-decoration: underline;
-    align-items: center;
-    justify-content: center;
-    text-justify: distribute;
+    align-items: flex-end;
+    justify-content: flex-end;
     display: flex;
-    font-size: 22pt;
+    font-size: 16pt;
+
 }
 
 .post-link:hover, .post-link:focus,
@@ -839,4 +852,23 @@ label {
 
 .post-publication.edit {
     margin-top: 0;
+    margin-bottom: 2em;
+    color: #533747;
 }
+
+.latest-title {
+    font-family: "La Belle Aurore", cursive;
+    font-size: 28pt;
+    margin-top: .5em;
+    color: #F40717;
+}
+
+
+/*
+
+011627 -dark dark blue
+ 260C1A - dark burgundy
+ 533747 grey purple
+ light brown B07156
+
+*/

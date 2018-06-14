@@ -1,29 +1,26 @@
 
-const express      = require('express');
-const bodyParser     = require('body-parser');
+const express      = require('express'),
+    bodyParser     = require('body-parser'),
+    path           = require('path'),
+    logger         = require('morgan'),
+    cookieParser   = require('cookie-parser'),
+    flash          = require('express-flash'),
+    session        = require('express-session'),
+    fs             = require('fs'),
+    expressHbs     = require('express-handlebars'),
+    expressWinston = require('express-winston'),
+    winston        = require('winston'),
+    db_url         = process.env.NODE_BLOG_DB,
+    sess_sec       = process.env.BLOG_SESS_SEC;
 
+let mongoose        = require('mongoose');
+let indexRouter     = require('./routes/index.js');
+let usersRouter     = require('./routes/users.js');
+let crudRouter      = require('./routes/update.js');
+let delRouter       = require('./routes/delete.js');
+let app             = express();
+let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
-let path           = require('path');
-let logger         = require('morgan');
-let cookieParser   = require('cookie-parser');
-
-let mongoose       = require('mongoose');
-let flash          = require('express-flash');
-let session        = require('express-session');
-let fs             = require('fs');
-let expressHbs     = require('express-handlebars');
-let expressWinston = require('express-winston');
-let winston        = require('winston');
-let db_url         = process.env.NODE_BLOG_DB;
-let sess_sec       = process.env.BLOG_SESS_SEC;
-
-let passport = require('passport');
-let GoogleStrategy = require('passport-google-oauth');
-// passport.use(new GoogleStrategy({
-//     consumerKey: GOOGLE_CONSUMER_KEY,
-//     consumerSecret: GOOGLE_CONSUMER_SECRET,
-//     callbackURL: "h"
-// }));
 
 
 mongoose.connect(db_url)
@@ -33,33 +30,19 @@ let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-let indexRouter     = require('./routes/index.js');
-let usersRouter     = require('./routes/users.js');
-let crudRouter      = require('./routes/update.js');
-let delRouter       = require('./routes/delete.js');
-let app             = express();
-let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
 app.set('port', (process.env.PORT || 3000));
+
+
 
 // view engine setup
 app.engine('.hbs', expressHbs({
     defaultLayout: 'layout',
     extname: '.hbs',
-    helpers: {
-        postPreview(text) {
-            let formattedPreview = '';
-            if(text.length < 100) {
-                formattedPreview = text;
-            }
-            else{
-                formattedPreview = text.substring(0, 100) + '...';
-            }
-            return formattedPreview;
-        }
-    }
+    helpers: { postPreview }
 }));
 app.set('view engine', '.hbs');
+
 
 app.use(logger('combined', {stream: accessLogStream})); // combined, common, dev, short, tiny
 app.use(express.json());
@@ -68,7 +51,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: sess_sec, resave: false, saveUninitialized: false}));
+app.use(session({ secret: sess_sec, resave: false, saveUninitialized: false }));
 app.use(flash());
 app.use(expressWinston.logger({transports: [new winston.transports.Console({json: true, colorize: true}),]}));
 app.use('/', indexRouter);
@@ -95,10 +78,10 @@ app.use(function(err, req, res) {
         res.status(err.status);
         res.render('404')
     }
-// set locals, only providing error in development
+    // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
-// render the error page
+    // render the error page
     res.status(err.status || 500);
     res.render('error');
 });
@@ -115,5 +98,39 @@ module.exports =
     bodyParser.json({extended:false});
 
 
+function postPreview(text) {
+    let formattedPreview = '';
+    if (text.length < 250) {
+        formattedPreview = text;
+    }
+    else {
+        formattedPreview = text.substring(0, 250) + '...';
+    }
+    return formattedPreview;
+}
 
 
+//     passport       = require('passport'),
+//     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+//
+//     pass = passport.Passport();
+//
+// pass.serializeUser(function(user, done) {
+//     done(null, user);
+// });
+//
+// pass.deserializeUser(function(obj, done) {
+//     done(null, obj);
+// });
+//
+//
+// pass.use(new GoogleStrategy({
+//     clientID: process.env.GOOGLE_CONSUMER_KEY,
+//     consumerSecret: process.env.GOOGLE_CONSUMER_SECRET,
+//     callbackURL: "http://www.kater-bater.herokuapp.com/oauth2callback"
+// },
+//     function(accessToken, refreshToken, profile, done) {
+//         User.findOrCreate({ googleId: profile.id }, function (err, user) {
+//             return done(err, user);
+//         });
+//     }));

@@ -1,4 +1,6 @@
 
+
+
 $(document).ready(function () {
 
     let paraOdd = $('p:odd');
@@ -36,6 +38,7 @@ $(document).ready(function () {
         $('#password-field').toggle(effect, duration);
         $('#submit-btn').toggle(effect, duration);
         $('#login-btn').toggle(effect, duration);
+        $('.g-signin2').toggle(effect, duration);
     });
 
 
