@@ -630,6 +630,7 @@ footer {
     margin-left: 1em;
     padding: .45em;
     align-items: center;
+    justify-content: center;
 
     /*background: url('../images/flower_light_burst.jpg') no-repeat center;*/
 }
