@@ -1,18 +1,17 @@
 
-const express      = require('express'),
-    bodyParser     = require('body-parser'),
-    path           = require('path'),
-    logger         = require('morgan'),
-    cookieParser   = require('cookie-parser'),
-    flash          = require('express-flash'),
-    session        = require('express-session'),
-    fs             = require('fs'),
-    expressHbs     = require('express-handlebars'),
-    expressWinston = require('express-winston'),
-    winston        = require('winston'),
-    db_url         = process.env.NODE_BLOG_DB,
-    sess_sec       = process.env.BLOG_SESS_SEC;
-
+let express         = require('express');
+let bodyParser      = require('body-parser');
+let path            = require('path');
+let logger          = require('morgan');
+let cookieParser    = require('cookie-parser');
+let flash           = require('express-flash');
+let session         = require('express-session');
+let fs              = require('fs');
+let expressHbs      = require('express-handlebars');
+let expressWinston  = require('express-winston');
+let winston         = require('winston');
+let db_url          = process.env.NODE_BLOG_DB;
+let sess_sec        = process.env.BLOG_SESS_SEC;
 let mongoose        = require('mongoose');
 let indexRouter     = require('./routes/index.js');
 let usersRouter     = require('./routes/users.js');
@@ -55,7 +54,6 @@ app.use(session({ secret: sess_sec, resave: false, saveUninitialized: false }));
 app.use(flash());
 app.use(expressWinston.logger({transports: [new winston.transports.Console({json: true, colorize: true}),]}));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/edit', crudRouter);
 app.use('/delete', delRouter);
 app.use(expressWinston.errorLogger({transports: [new winston.transports.Console({json: true, colorize: true})]}));

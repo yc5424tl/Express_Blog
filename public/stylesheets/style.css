@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'tr_eklekticregular';
     src: url('../fonts/TR Eklektic/tr_eklektic-webfont.woff2') format('woff2'),
@@ -357,6 +359,12 @@ footer {
     }
 }
 
+@media all and (max-width: 700px) {
+    #sidebar-div {
+        max-width: 100%;
+        width: 100%;
+    }
+}
 
 @media all and (min-width:540px) and (max-width: 1199px) {
     #content-right {
@@ -626,8 +634,8 @@ footer {
     text-align:    center;
     font-size:     40pt;
     /*border: 3pt double #437C90/*#326066*/;
-    width: 80%;
-    margin-left: 1em;
+    width: 100%;
+    /*margin-left: 1em;*/
     padding: .45em;
     align-items: center;
     justify-content: center;

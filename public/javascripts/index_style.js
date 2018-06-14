@@ -3,7 +3,14 @@
 
 $(document).ready(function () {
 
+
     let paraOdd = $('p:odd');
+
+
+    let viewportWidth = $(window).width();
+    if(viewportWidth < 701) {
+        $('#sidebar-div').removeClass('col-sm-5').addClass('col-sm-12');
+    }
 
 
     setInterval(function () {
@@ -61,7 +68,14 @@ $(document).ready(function () {
 
 
     $(window).on('resize', function () {
+
+        let viewportWidth = $(window).width();
+        if(viewportWidth < 701) {
+            $('#sidebar-div').removeClass('col-sm-5').addClass('col-sm-12');
+        }
+
         setFileInputSize();
+
         });
 
 
