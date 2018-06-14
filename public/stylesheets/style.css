@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'tr_eklekticregular';
+    src: url('../fonts/TR Eklektic/tr_eklektic-webfont.woff2') format('woff2'),
+         url('../fonts/TR Eklektic/tr_eklektic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 html {
     width: 100%;
@@ -603,7 +610,7 @@ footer {
     font-weight:   900;
     color:         #F40717;
     margin-bottom: .25em;
-    font-family:   "TR Eklektic", cursive; /* Karton, Annodomini, Scrawl of the Chief, TR Electric,  */
+    font-family:   tr_eklekticregular, cursive; /* Karton, Annodomini, Scrawl of the Chief, TR Electric,  */
     text-align:    center;
     font-size:     40pt;
     /*border: 3pt double #437C90/*#326066*/;
@@ -644,7 +651,7 @@ sub {
 
 .post-solo-body::first-letter {
     color: #F40717;
-    font-family: "TR Eklektic", cursive;
+    font-family: tr_eklekticregular, cursive;
     font-size: 40pt;
     font-weight: 800;
 }
